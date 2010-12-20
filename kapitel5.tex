@@ -1,0 +1,341 @@
+\chapter{Sicherheit in mobilen Netzen}
+%         	\begin{itemize}
+%               \item Es muss gewährleistet werden, dass keinerlei Informationen
+%               von außen abgehört werden können.
+%               \item z.B. Zugriff möglich, nur wenn Handynummer
+% 	          schon im System registriert + Passwort
+% 	          \item zusätzlich Kommuniktation mit dem Server nur über eine
+% 	          gesicherte SSL-Verbindung, wenn möglich (Aufwand überprüfen) ->
+% 	          Abhörsicherheitsproblem tritt vor allem im WLAN auf
+% 	          \item Sicherheitsaspekte evtl. trennen im Hinblick auf
+% 	          User/Entwicklersicht
+%             \end{itemize}
+            
+            \section{Sicherheitsprobleme in mobilen LANs und WANs}
+            \begin{quote}
+            ``Funknetze haben im Gegensatz zu leitungsgebunen Netzen
+            zusätzliche Gefährdungspunkte, die zumeist aus den verwendeten
+            Übertragungsprotokollen und der nur begrenzt kontrollierbaren
+            Ausbreitung der Funkwellen ergeben.'' [Eren06], S. 259
+            \end{quote}
+
+			\subsection{Bluetooth}
+			
+			Bluetooth ermöglicht die drahtlose Datenübertragung und lässt sich dabei
+			leichter konfigurieren als Beispielsweise WLAN. Es wird dabei kein direkter
+			Sichtkontakt zwischen den beteiligen Geräten benötigt (vgl. IRDA).
+			
+			%\subsubsection{Designschwächen und Implementierungsschwächen}
+			
+			In der Spezifikation von Bluetooth wird kein Verschlüsselungsalgorithmus
+			vorgeschrieben, deswegen ist in der Standardkonfiguration vieler Hersteller
+			die Verschlüsselung ausgeschaltet. Aber auch wenn diese aktiviert sein
+			sollte, heisst dies nicht unbedingt, dass die Verbindung sicher ist.
+			Der Verschlüsselungsalgorithmus bei Bluetooth baut auf einer XOR-Verknüpfung
+			von Klartext und Schlüsselstrom auf. Ein Angreifer kann Teile der
+			versendeten Nachricht herausfinden, weil der zur Kommunikation benutzte
+			TCP/IP-Header eine bekannte Form hat (hinsichtlich Größe und Aufbau).
+			Als Folge sinken mögliche Schlüsselkombinationen (Reduktion der
+			effektiven Schlüssellänge von 128 Bit auf 84 Bit wegen des bekannten
+			Headers). ``Brute-Force''-Angriffe werden somit erleichtert.
+			
+			Ein anderer Ansatzpunkt für Angreifer stellt der Zufallszahlengenerator dar.
+			Zufallszahlen werden in einigen Sicherheitsfunktionen verwendet. In der
+			Spezifikation des Bluetooth-Standards werden keine expliziten Anforderungen
+			an diesen gestellt. Da verschiedene Hersteller wirtschaftlich günstige
+			Algorithmen wählen, können teilweise durch die Bekanntheit dieser
+			Algorithmen die Ergebnisse vorhergesagt werden.
+			
+			Der bei einer Authentifizierung notwendige vierstellige Pin-Code stellt auch
+			bei einer 128-Bit Verschlüsselung leider immer noch keine ausreichende
+			Sicherheit zur Verfügung. Im Auslieferungszustand des Geräts ist
+			dieser meist auf ``0000'' gesetzt. Wenn der Pin-Code vom Angreifer also
+			richtig ermittelt werden kann, hat er die Möglichkeit die Kommunikation von
+			gepairten Geräten ungestört zu belauschen.
+			
+			Alle Sicherheitsdienste bei Bluetooth sind in der Datenübertragungsschicht
+			(Schicht 2 des ISO-OSI-Schichtenmodells) angesiedelt. Somit gibt es keine
+			Ende-zu-Ende Sicherheit. Die Verbindung wird zwar verschlüsselt, aber es
+			fehlt eine nahtlose und durchgehende Datenverschlüsselung zwischen den
+			Endgeräten.
+			
+			Das OBEX-Protokoll wird vor allem bei Bluetooth-Push-Diensten
+			eingesetzt. Auch dieses hat Schwächen. Der Stack wird vom
+			Zulieferer und nicht vom Hersteller implementiert. Somit kann es passieren,
+			dass Bluetooh-Geräte, die den gleichen Stack und das gleiche virtuelle
+			Dateisystem besitzen unauthorisierte Zugriffe aufs Filesystem (z.B.
+			Telefonbuch) unbeabsichtigt offen legen.
+			
+% 			Spoofing. Vortäuschen falscher Identität. Gerät A kommuniziert mit B. Gerät
+% 			C mit A und B. B nimmt Identität (Link Key) von C an und täuscht diesen bei
+% 			A vor. Kommunikation belauschen? Seite 270...
+			
+% 			Bluesniping mit Richtantenne. Bluetooth-Geräte müssen normalerweise in
+% 			unmittelbarer Reichweite sein (ca. 10 Meter entfernt). Mittels der
+% 			Richtantenne lassen sich auch weit entfernte Geräte  angreifen (bis zu 1
+% 			Kilometer).
+					
+			\subsection{GSM}
+						
+			GSM wurde auf Basis der bereits bestehenden Festnetztechnik entwickelt. Die
+			Verschlüsselung der Daten wurde nur als Option definiert, da in einigen
+			Ländern eine Verschlüsselung von staatlicher Seite untersagt ist. Auch wird
+			auf den meisten Endgeräten nicht angezeigt, ob eine Verbindung verschlüsselt
+			ist oder nicht. Ein weiterer Schwachpunt stellt der Umstand dar, dass Daten
+			nur zwischen der BTS und dem Teilnehmer verschlüsselt werden. Das abhören
+			von diesen Verbindungen ist an den diversen Schnittstellen der BTS zu
+			anderen Netzkomponenten ohne großen Aufwand möglich. Der potentielle
+			Angreifer verschafft sich physischen Zugang zu einem BTS und kann von dort
+			die Kommunikation belauschen bzw. manipulieren.
+			
+			Ebenfalls eine Schwachstelle ist der Kurznachrichtendienst SMS. Hier werden
+			Nachrichten unverschlüsselt über den Signalisierungskanal übertragen. Anhand
+			der Übertragungsfrequenz kann so ein Angreifer Nachrichten mitlesen.
+			
+			\subsection{GPRS}
+			
+			GPRS stellt eine Erweiterung des GSM-Netzes um paketorientierte
+			Datenübertragung dar. Der Einstieg über das GPRS-Netz ins Internet wird als
+			$G_{i}$-Schnittstelle bezeichnet. Während der Datenkommunikation über GPRS
+			ist der Teilnehmer anfällig für im Netz verbreitete Gefahren und Angriffe.
+			Falls der Datenverkehr unverschlüsselt stattfindet besteht die Gefahr, dass
+			Daten durch einen Angreifer abgefangen und missbraucht werden. Häufig
+			rechnen Mobilfunkbetreiber mit solchen Gefahren und platzieren eine Firewall
+			an der $G_{i}$-Schnittstelle.
+			
+			\subsection{UMTS}
+			
+			UMTS stellt eine Erweiterung auf Basis der verbreiteten Technik dar. Damit
+			gewährleistet ist die Abwärtskompatibilität zu GPRS/GSM. 
+			
+			%TODO: hier weiterschreiben!!!
+			
+			\subsection{HSDPA}
+			
+			\subsection{LTE}
+			Neue Technik!!! noch nicht in Deutschland verfügbar
+			
+			\subsection{Wireless LAN}
+			
+			Die Mit der technischen Spezifikation verbundene Systemoffenheit
+			zuverlässige und bequeme Einstiegspunkte ins ein Netzwerk zur Verfügung zu
+			stellen enblößt leider auch abgeschottete private Netzwerke. Im Folgenden
+			werden die verschiedenen Methoden der Verschlüsselung für Wireless LAN (kurz
+			WLAN) erläutert und konkret auf deren Schwachstellen eingegangen.
+			
+			\subsubsection{WEP}
+			
+			Das WEP-Protokoll verwendet zur Absicherung der Verbindung den symmetrischen
+			Algoritmus RC4. 
+			
+			\begin{quote}
+           	``Dieser ist ein Stromverschlüsselungsalgorithmus, der den
+			Klartext über eine XOR-Operation mit einer Folge von Pseudozufallszahlen
+			verknüpft.'' [Eren06], S. 287
+			\end{quote}
+			
+			Der WEP-Key wird entweder mit 40 Bit (WEP 64) oder 104 Bit (WEP 128) erzeugt.
+			
+			%\subsubsubsection{Schwächen von WEP}
+			
+			%Schwächen von WEP
+			
+			Schlechte Implementierungen des Initialisierungsvektors (der zusammen mit
+			dem WEP-Key dazu benutzt wird die Übertragung zu verschlüsseln) führen zu
+			Kollisionen in den übertragenen Daten. Angreifer können diese Kollisionen
+			erkennen und dadurch auf die unverschlüsselte Nachricht schliessen.
+			
+			Bei WEP fehlt eine gegenseitige Authentisierung. Aufgrund der Einfachheit,
+			eine Netzwerkkomponente (insbesondere MAC-Adresse) zu fälschen entsteht
+			damit eine wesentliche Sicherheitslücke.
+			
+			Nach RFC 1024 müssen alle IP- und ARP-Pakete stest mit einem ``0xAA'' beginnen.
+			Dies kann von einem Angreifer ausgenutzt werden, um den WEP-Schlüssel zu
+			ermitteln. Mit relativ wenig Aufwand wird genug Chiffretext gesammelt. Um
+			den Schlüssel ermitteln zu können, müssen die ersten Bystes des Klartextes
+			bekannt sein. Aufgrund der Anforderung nach RFC haben Angreifer also
+			leichtes Spiel.
+			
+			
+			
+			\subsubsection{WPA}
+			
+			Der grundlegende Unterschied zu WEP ist die Verwendung von TKIP als
+			Verschlüsselungsprotokoll. Prinzipiell lässt sich WEP mittels Software- und
+			Firmware-Updates auf WPA upgraden.
+			
+			Um die Schwachstellen von WEP auszumerzen implementiert WPA dynamische
+			Schlüssel für jedes versendete Paket. Dabei besitzt jeder Benutzer einen
+			eigenen Schlüssel.
+			
+			WPA ist anfällig für Wörterbuchattacken, da der Preshared Master Key direkt
+			aus der Passphrase und der SSID abgeleitet wird. Für einen solchen Angriff
+			reicht ein aufgezeichneter TKIP-Handshake aus. Allerdings benötigen die
+			anschließenden Berechnungen einen aktuellen High-End-PC, da gerade einmal
+			ca. 70 Passwörter pro Sekunde geprüft werden können. Falls also ein
+			geeignetes starkes Passwort gewählt wurde geht von dieser Attacke eine nur minimale
+			Gefahr aus.
+			
+			\subsubsection{WPA2}
+			
+			Da der bei WEP und WPA zugrundeliegende Algorithmus RC4 als gebrochen gilt,
+			wurde bei WPA2 die AES Verschlüsselung eingesetzt. Dabei bleibt WPA2 noch zu
+			WPA abwärtskompatibel.
+			
+			Eine ``Brute-Froce''-Attacke ist zwar rein theoretisch denkbar, aber sehr
+			unwahrscheinlich, da die Wahrscheinlichkeit für eine identische Prüfsumme
+			eines MAC bei ca. 1 : 1 Mio. liegt. Ausserdem wird bei einer Attacke ein 60
+			Sekunden andauernder Blackout (Unterbrechen der Verbindung) des Access
+			Points verwendet, um etwaige Attacken abzublocken. Allerdings kann eine
+			``Denial-of-Service''-Attacke so durchaus erfolgreich sein, wenn es der
+			Angreifer nicht auf den Schlüssel abgesehen hat.
+            
+            \section{Denkbare Angriffsformen auf Mobiltelefone in einer
+            Firmeninfrastruktur}
+            
+            \begin{itemize}
+	            \item Ausspähen von Daten: Der Angreifer verschafft sich
+	            Zugang zu relevanten Daten, die auf dem jeweiligen Gerät
+	            gespeichert sind. Dazu gehören Kontaktlisten, E-Mails, SMS und
+	            andere vertrauliche Dokumente und Dateien.
+	            \item Nutzung eigener Dienste und Zugänge: Wird eine
+	            Authentifizierung lediglich beim Einschalten des Geräts verlangt,
+	            kann das Gerät im Verlustfall ganz leicht von Kriminellen wie ein
+	            Schlüssel für Dienste und Zugänge genutzt werden. Dadurch können
+	            Sicherheitsmechanismen, die Firmen-, Service- oder Datenstrukturen
+	            vor unbefugtem Zugang schützen, ausgehebelt werden.
+	            \item Manipulation der Software-Komponenten: Dabei können Angriffe
+	            auf Netzwerke in Verbindung mit der Synchronisation zwischen
+	            mobilem Gerät und dem Firmennetz erfolgen, um Informationen oder
+	            Daten direkt zu erhalten. Darüber hinaus bietet die Konfiguration
+	            von Proxies, die bei der Internetkommunikation genutzt werden, die
+	            Möglichkeit des Abhörens und Aufzeichnens, aber auch der
+	            Manipulation (Tracing, Capturing, Logging) der an das Gerät
+	            zurückgesendeten Informationen.
+	            \item Überwachung: Moderne Smartphones bieten neben
+	            Kommunikationsschnittstellen wie GPRS, 3G, WLAN und Bluetooth
+	            unlängst auch GPS-Module. Damit lassen sich raumbezogene
+	            Referenzinformationen ablegen, die das Erstellen eines genauen
+	            Bewegungsprofils ermöglichen. Dazu ist eine Manipulation des
+	            Geräts notwendig, die aber keines Diebstahls bedarf.
+            \end{itemize}
+            
+            \section{Sicherheitsmechanismen}
+            
+            Folgende Mechanismen sollen dazu beitragen, dass Firmenrelevante
+            Daten nicht einfach von Dritten ausgespäht werden können.
+            
+            \subsection{WLAN sichern mit Radius}
+            Beim WLAN-Einsatz in Unternehmen reicht die simple
+            Authentifizierung über ein gemeinsames Passwort (Shared Secret)
+            mit WPA-PSK nicht: Das Geheimnis ist bei großer Verbreitung zu
+            schnell keines mehr. Spätestens wenn ein Kunde vorübergehend einen
+            Zugang bekommen hat, muss man es ändern. Mit serverseitig
+            zugeteilten Passwörtern erspart sich der Administrator viel Arbeit
+            und Nachfragen seiner Nutzer.
+            
+            Für solche Einsatzfälle ist die Spielart WPA Enterprise gedacht,
+            bei der die WLAN-Basisstation Verbindungsanfragen von ihren
+            Clients über das Protokoll IEEE 802.1x mit einem nachgelagerten
+            Radius-Server aushandelt. Auf Linux-Systemen ist dazu das
+            Open-Source-Paket Freeradius gängig. [Radius10], letzter Abruf
+            07.12.2010
+            
+            Mit dem Extensible Authentication
+            Protocol (EAP) unterstützt es verschiedene kryptografisch
+            gesicherte Methoden (EAP-TLS/-TTLS, PEAP, LEAP),
+            One-Time-Passworte und SIMs. Für die Authentifizierung sind
+            Username/Passwort-Kombinationen oder Zertifikate gebräuchlich.
+
+			Damit Daten nicht im Klartext durch die Luft beziehungsweise über die
+			Leitung zwischen Basisstation und Radius-Server laufen, verschlüsselt
+			Freeradius diese. Voraussetzung dafür ist, dass auf dem Client mindestens ein
+			Stammzertifikat (Root CA Certificate) installiert ist, von dem das Zertifikat
+			des Radius-Servers abgeleitet ist. Mit dem Stammzertifikat prüft der Client
+			auch, dass er sich beim richtigen Radius-Server authentifiziert.
+			
+			\subsection{MDM}
+			
+			\begin{figure}
+			  %\begin{minipage}[b]{0.48\textwidth}
+			      \centering	% zentrieren
+			      \includegraphics[width=0.8\textwidth]{microsoft_security_trends}
+			      \caption{Datenverluste in Unternehmen}
+			      \label{fig:microsoft_security_trends}
+			\end{figure}
+%TODO: Quelle
+			
+			
+			Wie man der Abbildung \ref{fig:microsoft_security_trends} entnehmen kann
+			führt der Diebstahl von Endgeräten am häufigsten zu Sicherheitseinbrüchen in
+			Systemen.
+			
+			MDM (Mobile Device Management) bezeichnet die Möglichkeit von der Ferne aus
+			auf ein Mobiltelefon zuzugreifen und dieses gegebenenfalls zu sperren bzw.
+			Daten zu löschen oder andere Sicherheitsmechanismen auszulösen.
+			
+			Die derzeitige Funktionspalette umfasst: 
+
+			\begin{itemize}
+              	\item auf dem Gerät enthaltene Daten sichern und wieder
+              	aufspielen (``Backup \& Restore'')
+              	\item Software-Updates zentralisiert und drahtlos aufspielen, um
+    			Sicherheitslücken schnell zu schließen (``Update Over The Air'')              
+    			\item ein gestohlenes oder verlorenes Gerät aus der Ferne sperren und
+    			seine Daten löschen (``Remote Lock \& Wipe'') sowie per GPS verfolgen
+    			(``Mobile Tracking'')
+    			\item einzelnen Nutzern differenzierte Rechte zuteilen - vom
+    			Internet-Zugang bis zur Installation von Programmen (``Policy \&
+    			Provisioning'')
+    			\item  Statistiken erstellen, wie ein Smartphone genutzt wird und welche
+    			Kosten anfallen (``Logging \& Accounting'')
+            \end{itemize}
+
+			MDM-Lösungen müssen dabei den gesamten Lebenszyklus eines Smartphones
+			begleiten. Zu Beginn
+			bekommen die Geräte eine Identität zugewiesen, die mit den entsprechenden
+			Zugangsberechtigungen und Funktionseinschränkungen verknüpft ist. Im Idealfall
+			bekommt der Nutzer für sein Smartphone nur noch ein Passwort, mit dem er sich
+			einmalig für die Erstkonfiguration anmelden kann. Während der normalen Nutzung
+			im Alltag können die Firmen-Administratoren mittels MDM dann zentral
+			Software-Updates verteilen, Geräte sperren oder durch Konfigurationsänderungen
+			schnell auf Sicherheitslücken reagieren. Wird das Smartphone schließlich
+			ausgemustert oder verlässt der Nutzer das Unternehmen, werden mittels MDM
+			Berechtigungen gelöscht, Unternehmensdaten getilgt oder die Konfiguration auf
+			ein neues Endgerät übertragen.
+			
+			Der Markt für MDM-Lösungen ist derzeit noch übersichtlich. Statistiken über
+			Marktanteile existieren nicht. Zu den großen drei, die immer wieder genannt
+			werden, gehören jedoch die US-Unternehmen Mobile Iron, Good Technology und
+			Sybase. Ihre Produkte unterscheiden sich dabei vor allem im Detail - während
+			Good Technology großes Know-how in Sales-Umgebungen verspricht, streicht man
+			bei Mobile Iron die Handhabbarkeit unterschiedlicher Smartphone-Plattformen
+			heraus. Sybase wirbt wiederum mit einer guten Anbindung an die hausinterne IT.
+			Zumeist bezahlen Unternehmen einen Sockelbetrag plus eine Lizenzgebühr pro
+			Nutzer. Mit insgesamt einigen Tausend Euro pro Jahr müssen die Firmen dabei
+			rechnen. Anbieter wie Mobile Iron haben für Neukunden aber auch Lockofferten
+			von nur vier Dollar pro Nutzer und Monat (plus Sockelbetrag) im Angebot.
+			
+			Was die Sache noch komplizierter macht: In vielen Firmen werden längst nicht
+			mehr nur reine Businessgeräte wie die Blackberrys des kanadischen Anbieters
+			RIM eingesetzt. Apples iPhone beispielsweise hat mittlerweile ebenfalls einen
+			Siegeszug in Unternehmen angetreten. Der traditionsreiche IT-Dienstleister
+			Unisys etwa, der für Firmen und Regierungen auf der ganzen Welt arbeitet,
+			benutzt iPhones, um Server zu überwachen, aber auch für höchst
+			sicherheitskritische Anwendungen wie die Steuerung von Systemen zur
+			Kameraüberwachung.
+			
+			Ein weiterer kritischer Punkt sind private Anwendungen auf Firmen-Smartphones.
+			Geräte wie das iPhone laden geradezu dazu ein, neben geschäftlichen Apps auch
+			Spiele zu installieren oder Multimedia-Content zu konsumieren. Schließen
+			lässt sich dieses Sicherheitsloch derzeit nur, indem Firmen das Aufspielen			privater Inhalte ganz verbieten.
+			%TODO: überarbeiten/umschreiben... evtl. streichen
+            
+            \section{Entscheidung für Übertragungstechnik}
+            
+            % evtl. bluetooth lt. gespräch? 
+            
+           	begründung durch schlussvolgerung aus
+           	sicherheitslücken und erläuterung sicherheitskonzept, damit die
+           	schwachstellen der technik nicht ausgenutzt oder nur zum teil
+           	ausgenutzt werden können.

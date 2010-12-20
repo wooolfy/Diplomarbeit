@@ -1,0 +1,56 @@
+% Hyperref Einstellungen
+\hypersetup{
+ pdfauthor={Georg Wolf},
+ pdftitle={Erstellung von Apps zum Einsatz auf Handys und Mobil-PCs zur
+ Kommunikation mit Maschinen und Linien}, pdfsubject={Diplomarbeit, FH
+ Gummersbach}, pdfkeywords={Diplomarbeit, Smartphone Apps, Android, iOS},
+ backref=true,
+ pagebackref=true,
+ hyperfigures,
+ hyperindex,
+ colorlinks,
+ bookmarksopen,
+ bookmarksopenlevel=1,
+ bookmarksnumbered,
+ pageanchor,
+ plainpages=false,
+ % Hyperlink Farben:
+ urlcolor=black,
+ pagecolor=black,
+ menucolor=black,
+ citecolor=black,
+ anchorcolor=black,
+ filecolor=black,
+ linkcolor=black,
+ colorlinks=true, % Links einfaerben oder umranden
+}
+
+\setlength{\parindent}{0pt}	% Einrücktiefe bei Absätzen einstellen
+\setlength{\parskip}{1.5ex}	% Absatzabstand einstellen
+
+% Mit folgenden Werten kann man die Silbentrennung einstellen (0..10000).
+%\hyphenpenalty=10000 
+%\exhyphenpenalty=10000
+%\hyphenpenalty=10 \exhyphenpenalty=10
+
+\setcounter{secnumdepth}{3}	% Hier stellt man ein bis zu welcher Ordnung Überschriften nummeriert werden (Beginnt bei 0 (Kapitel) und geht bis 5 (Subparagraph)
+\setcounter{tocdepth}{3}	% Hier stellt man ein bis zu welcher Ordnung Überschriften ins Inhaltsverzeichnis übernommen werden (ebenfalls 0 - 5)
+%
+
+\setlongtables
+
+\graphicspath{{images/}{/global/images/}{anhang/}}	% Pfade für Grafiken angeben
+
+\makeindex
+
+% Anzahl und max. Seitenanteil von Abbildungen und Tabellen einstellen
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand{\textfloatsep}{3ex}
+\renewcommand{\floatsep}{3ex}
+
+% Nicht empfehlende Einstellungen:
+%\sloppy    % Schlampige Absatzformatierung (wie M$ Word)
+%\usepackage{wordlike}    % Simuliert M$ Word 
+

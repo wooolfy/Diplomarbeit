@@ -1,0 +1,53 @@
+\chapter{Systemspezifikation}
+% 		\section{Dingschema/Handlungsschema?}
+% 		\begin{itemize}
+%           \item Kompletten Funktionsumfang ermitteln und dokumentieren
+%           \item einzelne Handlungen müssen vollständig ausformuliert werden
+%           \item Evtl. dann schon eine Vorauswahl treffen, wenn Funktionsumfang
+%           zu groß für den Rahmen dieser Arbeit sein sollte und auf Grundlage
+%           dessen weiterarbeiten. (Kernfunktionen umsetzen oder evtl. nur
+%           Prototypen erzeugen, der nur teilweise funktionsfähig sein wird)
+%         \end{itemize}
+      	%\section{Model Driven Architecture}
+      	
+
+		\section{Geschäftsvorfall für die umzusetzende App}
+		\begin{itemize}
+          \item 1(/2) Funktion(en) vom Kapitel Funktionsumfang auswählen. 
+          \item Nochmal näher beschreiben.
+        \end{itemize}
+        
+        Ein realistischer Geschäftsvorfall soll als Grundlage für die Umsetzung
+        des Prototypen dienen.
+        
+        \subsection{Vorgaben}
+        
+        Es soll gezeigt werden, dass mit MDA die Umsetzung des 
+        Geschäftsvorfalles technisch möglich ist. Ebenso sollen die Grenzen
+        der Technologie erforscht werden. Dabei soll gezeigt werden, dass
+        folgende Artefakte aus dem Modell erzeugt werden könne: 
+        \begin{itemize}
+          \item Persistenz
+          \item Fachliche Logik
+          \item Arbeitsabläufe (Workflow)
+          \item Benutzer Frontend
+        \end{itemize}
+
+%TODO: überarbeiten!!!!
+
+      	\section{Anwendung auf die Anforderungsdefinition}
+      	\begin{itemize}
+            \item Die Transformationen erzeugen dabei aus den Elementen des
+            Quellmodells die Elemente des Zielmodells. Üblicherweise laufen
+            die Transformationen von der abstrakteren zur konkreteren Schicht
+            (CIM -> PIM -> PSM -> Code)
+            \item Ist hier wirklich eine komplette Transformation nötig? Dann
+            müssen mit OAW komplett alle Cartridges erstellt werden
+            \item Ansonsten Acceleo für Model-zu-Code Transformation; Dafür
+            muss nur 1 Template je umzusetzendes Betriebssystem geschrieben
+            werden und die Templates können aus vorhandenem Beispielcode
+            generiert werden (sehr schnelle Erstellung von Templates möglich)
+            \item Evtl. AndroMDA (wird allerdings seit 2006 nicht mehr
+            weiterentwickelt...)
+            \item Kommerzielle Lösungen?
+          \end{itemize}

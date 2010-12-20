@@ -1,0 +1,158 @@
+% % Diplomarbeit Vorlage Tex V 000.1
+
+%\documentclass[12pt,pdftex]{article}
+\documentclass[12pt,pdftex,a4paper,titlepage]{scrreprt}
+%\documentclass[12pt,pdftex,a4paper,titlepage]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage[ngerman]{babel}
+\usepackage[ngerman]{varioref}
+\usepackage{lmodern} %bessere Schriftart
+\setlength{\parindent}{0pt} 
+\usepackage{setspace} %
+%\singlespacing%    Einfacher Zeilenabstand
+%\onehalfspacing%    1 1/2 Zeilenabstand (entspricht angeblich den doppelten
+% Zeilenabstand in Word)
+\doublespacing%    Doppelter Zeilenabstand
+
+\frenchspacing%     Kein doppeltes Leerzeichen nach '.' etc.
+
+% Laden unterschiedlicher Pakete
+%\usepackage{algorithmicx}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{array}			 					% Für formatierungen in Tabellen
+\usepackage{color}	  		   		 			% Farben
+\usepackage{framed}								% Einfache rechteckige Rahmenboxen
+\usepackage{makeidx}							% Indexverzeichnis
+\usepackage{wallpaper}
+\usepackage{url}
+\usepackage{pstricks, pst-node, pst-tree}  
+\usepackage{floatflt}
+\usepackage{listings,color}    					 %% color für Farbmarkierungen
+\usepackage[a4paper,pdftex,top=2cm,left=3cm,right=2cm,bottom=2.5cm]{geometry}
+%\usepackage[a4paper,pdftex,top=2cm,left=3cm,right=2cm,bottom=2.5cm,twoside]{geometry}
+%\usepackage{pdfpages} komische fehlermeldung?!?
+\usepackage[activate=normal]{pdfcprot}			% optischer Randausgleich
+\usepackage{graphicx} 							% EPS grafiken
+\usepackage{epstopdf}							% eps grafiken in pdftex erlaubt
+\usepackage{hyperref}
+\usepackage{longtable}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparsep}
+\headheight=15pt
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\rhead{\rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+% footer
+\rfoot{\thepage}
+
+%redefine plain pagestyle - used for chapter pages.
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \rfoot{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+
+ \lstset{
+   basicstyle=\small\ttfamily,
+   keywordstyle=\bfseries\ttfamily\color{blue},
+   stringstyle=\color{green}\ttfamily,
+   commentstyle=\scriptsize\color{blue}\rmfamily,
+   emph={square}, 
+   emphstyle=\color{blue}\texttt,
+   emph={[2]root,base},
+   emphstyle={[2]\color{yac}\texttt},
+   showstringspaces=false,
+   flexiblecolumns=true,
+   tabsize=2, 
+   numbers=left,
+   numberstyle=\small,
+   numberblanklines=false,
+   stepnumber=1,
+   numbersep=10pt,
+   xleftmargin=10pt,
+   language=JAVA
+ }
+ 
+\include{settings}
+
+\setcounter{tocdepth}{1} 	%Gliederungstiefe im Inhaltsverzeichnis 
+							%1 = nur erste und zweite ordnung
+
+\begin{document}
+%\maketitle
+
+\onehalfspacing%    1 1/2 Zeilenabstand (entspricht angeblich den doppelten
+% Zeilenabstand in Word)
+
+%Leere Seite am Anfang
+\newpage\thispagestyle{empty}~
+
+% Titelblatt
+\include{titelblatt}
+\include{vorwort}
+\ifpdf\pdfbookmark{\contentsname}{tableofcontents}\fi%   PDF Bookmark Eintrag fuer das Inhaltsverzeichnis.
+{\singlespacing
+\tableofcontents
+}
+%\doublespacing
+\onehalfspacing
+
+\newpage
+\listoffigures   % Abbildungsverzeichnis
+\newpage
+\listoftables    % Tabellenverzeichnis
+%Abkürzungsverzeichnis
+\include{abkuerzungsverzeichnis}
+
+% \include{kapitel1}
+% 
+% \include{kapitel2}
+% 
+% \include{kapitel2_5}
+% 
+% \include{kapitel7}
+% 
+% \include{kapitel4}
+% 
+% \include{betriebssysteme}
+% 
+% \include{kapitel6}
+% %Zukunftsausblick und Zusammenfassung der Arbeit
+% \include{zusausblick}
+\include{kapitel1}
+
+\include{kapitel2}
+
+\include{kapitel3}
+
+\include{kapitel4}
+
+\include{kapitel5}
+
+\include{kapitel6}
+
+\include{kapitel7}
+%Zukunftsausblick und Zusammenfassung der Arbeit
+\include{kapitel8}
+%ANHANG TODO: BUCHSTABEN statt Zahlen... aber wie??
+\begin{appendix}
+%Literaturverzeichnis
+\include{literatur}
+%Anhang (Quellcode...)
+\include{anhang}
+%Erklärung, dass man alles selbst verfasst hat und alle Quellen offen gelegt
+% wurden
+\include{erklaerung}
+\end{appendix}
+%Leere Seite am Ende
+\newpage\thispagestyle{empty}~
+
+\end{document}
+

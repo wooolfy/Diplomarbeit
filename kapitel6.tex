@@ -1,0 +1,596 @@
+\chapter{Mobile Betriebssysteme und Entwicklungsvoraussetzungen}
+		Der Smartphonemarkt ist relativ groß und unübersichtlich. Im Nachfolgenden
+		werden verschiedene Betriebssysteme angesprochen und verglichen, um eine
+		Ausgangsbasis zu schaffen. Dabei wird verstärkt auf die derzeitigen
+		Marktführer eingegangen (vgl. Abbildung \ref{fig:SP-marktA}). %auf Seite
+		%\pageref{fig:SP-marktA}). 
+		
+		Wie man der Grafik entnehmen kann sind dies vor Allem das von Nokia
+		verbreitete Symbian, Google's Android und iOS von Apple. Symbian
+		bleibt zwar laut Statistik wieterhin unangefochtener Marktführer,
+		befindet sich allerdings auf dem absteigenden Ast. Android und iOS
+		bauen ihren Marktanteil immer weiter aus und werden Symbian so wohl
+		bald vom Thron stossten. 
+		
+% 		Weiterhin werden zur Vollständigkeit noch andere Betriebssysteme erwähnt, die
+% 		sich im Moment im Umlauf befinden. Allerdings ...
+		
+		%TODO Grafik: eventuell direkt als Tabelle neu basteln, damit die Grafik
+		% nicht schlechte skaliert...
+		\begin{figure}
+		  %\begin{minipage}[b]{0.48\textwidth}
+		      \centering	% zentrieren
+		      \includegraphics[width=0.8\textwidth]{MA_smartphones}
+		      \caption{Smartphone - Marktanteile}
+		      \label{fig:SP-marktA}
+		  %\end{minipage}% Dies Prozent ist wichtig! (kein horiz. Abst. zw. minipages
+		\end{figure}
+		
+		\section{iOS}
+		\begin{itemize}
+          \item Grundlagen und Bedienung
+          %\item Voraussetzungen für die Entwicklung
+          %\item -> speziell AppStore
+          %\item Jailbreak ansprechen
+          %\item Alternative Entwicklung ohne die MAC XCode Tools aufzeigen
+          \item Hinweis auf Legalität/Schwierigkeit
+        \end{itemize}
+        
+	        \subsection{Architektur}
+	        Apple überlässt dem Entwickler beim iPhone nicht direkten Zugriff auf
+	        die Hardware, sondern über diverse Layer (Tabelle
+	        \ref{tab:iphonearch}), die zwischen Hardware und der Applikation vermitteln sollen. Diese Layer beschreiben das iOS. [Koller10]
+	        
+	        \begin{table}%[h]
+	        	\centering \leavevmode %Tabelle zentrieren
+		        \caption{Die Architektur des iPhone OS}
+		        \label{tab:iphonearch}
+		        %\addtocounter{footnote}{+1}
+		        \begin{tabular}{||c||}
+		        \hline
+		        \hline
+		        \texttt{Eigene (native) Anwendungen}\\
+		        \hline
+		        \hline
+		        \texttt{Cocoa Touch}\\
+		        NSFFoundation, UIKit\\
+		        \hline
+		        \hline
+		        \texttt{Media}\\
+		        (Quartz, Core Animation, Open GL, Core Audio, ...)\\
+		        \hline
+		        \hline
+		        \texttt{Core Services}\\
+		        (Core Location, Adress Book, SQLite, CFNetwork, ...)\\
+		        \hline
+		        \hline
+		        \texttt{Core OS}\\
+		        (I/O, Threads, Sockets, Bonjour, Key Chain, ...)\\
+		        \hline
+		        \hline
+		        \end{tabular}
+			\end{table}
+
+	        \subsection{iOS Komponenten}
+	        
+	        Der ``Cocoa Touch Layer'' beinhaltet die am häufigsten von 
+	        Entwicklern genutzten Frameworks zum Programmieren des iPhones. Er
+	        basiert auf der Standard Mac OSX Cocoa API und wurde an die
+	        Bedürfnisse des iPhones angepasst. Die wichtigsten Komponenten hieraus
+	        sind das ``UIKit Framework'' (Zuständig z.B. für das erstellen des
+	        Userinterfaces), der ``Push Nocification Service'' (Nachrichten werden
+	        eventgesteuert an den Benutzer weitergegeben), das ``Message UI
+	        Framework'' und das ``Address Book UI Framework''.
+	        
+	        Eine Schicht unter Cocoa befindet sich der ``Media Layer''. Dieser ist
+	        dafür zuständig, dass das iPhone mit Audio-, Videodaten und
+	        (3D-)Grafik umgehen kann.
+	        
+	        Mit dem ``Core Service Layer'' hat man beispielsweise die Möglichkeit
+	        auf die im System integrierte mySQL Datenbank zuzugreifen. Weiterhin
+	        lässt sich zum Beispiel mit dem ``Data Framework'' das MVC Prinzip für
+	        Applikationen umsetzen.
+	        
+	        Der ``Core OS Layer'' liegt direkt auf der Hardware auf. Hier werden
+	        einige Dienste zur verfügung gestellt, wie zum Beispiel der
+	        Netzwerkzugriff (low level), der Zugriff auf externe Geräte oder
+	        Betriebssystemspezifische Dinge wie Speichermanagement oder wie mit
+	        Threads umzugehen ist.       
+	        
+	        \subsection{Sicherheit}
+	        
+	        Entwickelt wird für das iPhone in Objective C. Der Quellcode wird in
+	        Machinensprache übersetzt und läuft ohne zusätzliche Laufzeitumgebung.
+	        Apples Sicherheitskonzept sieht eine Isolierung der Apps und Prozesse
+	        mittels einer Mandatory Access Control vor.
+	        
+	        In der Vergangenheit stellte sich immer wieder heraus, dass trotz
+	        Sandboxing Apps zumindest lesend auf Konfigurationsdateien zugreifen
+	        können. Das liegt unter Anderem auch an den Mac OS X ähnlichen
+	        Zugriffsregeln auf Basis von Regular Espressions. Es werden
+	        Zugriffsrechte generisch definiert und nicht auf einzelne Apps
+	        abgestimmt. 
+	        
+	        Allerdings existiert neben dem Softwareseitigen Sandboxing und dem
+	        Code Signing ausserdem ein hardwareseitiger Schutz. Der ARM-Prozessor
+	        des iPhones unterstützt eine Datenausführungsverhinderung (DEP). Diese
+	        soll die Auswirkungen von Buffer Overflows und Heap Overflows
+	        limitieren. [CT10\_2], Seite 80ff
+	        
+	        \subsection{Entwicklung}
+	        Bei Apple muss zur Entwicklung ein Gerät aus dem eigenen Hause
+	        verwendet werden. Die XCode Tools, so wie sich die Entwicklungsumgebung
+	        nennt, sind nicht für Windows oder Linux erhältlich. Somit scheiden
+	        alle anderen Betriebssysteme erst einmal aus. Allerdings kann man sich
+	        nach der Registrierung als ``Apple Developer'' auf der Apple
+	        Entwicklerhomepage das iPhone SDK kostenlos herunterladen.
+	        [AppleDev10], letzter Abruf: 30.11.2010
+	        
+	        Dafür erhält man mit dem iPhone SDK für die Xcode Tools eine
+	        komfortable Entwicklungsumgebung und einen iPhone Simulator zum Testen
+	        der selbstgeschriebenen Apps.
+	        
+	        Um eine Eigenentwicklung allerdings tatsächlich auf dem Zielgerät
+	        laufen zu lassen, muss man sich bei Apple als Entwickler einkaufen.
+	        Dies ist in verschiedenen Variationen möglich (vgl. Tabelle
+	        \ref{tab:appledevcosts}).
+	        
+	        Die für das iPhone eingesetzte Programmiersprache ist Objective C. Was
+	        in etwa der normalen Sprache C entprischt mit der Erweiterung auch
+	        objektorientiert programmieren zu können. Erlaubt wird allerdings auch
+	        normales C und C++.
+	        
+	        %\addtocounter{footnote}{1}
+	        \begin{table}%[h]
+	        	\centering \leavevmode %Tabelle zentrieren
+		        \caption{Apple Developer Programs}\footnotemark
+		        \label{tab:appledevcosts}
+		        %\addtocounter{footnote}{+1}
+		        \begin{tabular}{|l|r|}
+		        \hline
+		        Apple Programmname & Kosten/Jahr\\
+		        \hline
+		        \hline
+		        iOS Developer Program - Individual & 99 \$ \\
+		        \hline
+		        iOS Developer Program - Company & 99 \$ \\
+		        \hline
+		        iOS Enterprise Program & 299 \$ \\
+		        \hline
+		        iOS Developer University Program & kostenlos\\
+		        \hline
+		        \end{tabular}
+			\end{table}
+			%\addtocounter{footnote}{-1}
+			\footnotetext{http://developer.apple.com/programs, letzter Abruf
+				24.11.2009}
+	        
+	        \subsection*{Jailbreak/Hackint0sh}
+	        
+	        %TODO: hacker ersetzen durch ??
+	        Da Apple sehr restriktiv mit den Entwicklungsvoraussetzungen ist,
+	        haben sich ``Hacker'' zusammengetan und einen Weg gefunden, wie man
+	        diese Voraussetzungen umgehen kann.
+	        
+	        Die erste Voraussetzung ist ein iPhone/iPad, dass ``geJailbreakt''
+	        wurde. (siehe Anhang) %TODO: Anhang
+	        Mittels eines SSH-Zugangs lassen sich nun auch Programme, die sich
+	        nicht im AppStore befinden auf das Gerät laden.
+	        
+	        Aber nicht nur das Zielgerät für die App muss freigeschaltet werden.
+	        Prinzipiell sieht Apple vor, dass man nur mit hauseigener Hardware
+	        (z.B. Macbook) mit dem Betriebssystem SnowLeopard entwickeln kann.
+	        Da die neuesten Macbooks mittlerweile mit Intel Prozessoren bestückt
+	        werden, haben dies einige findige Hacker ausgenutzt und es geschafft
+	        das Betriebssystem auch auf herkömmlichen PC's mit Intel und sogar AMD
+	        Prozessoren lauffähig zu machen. (siehe Anhang).
+	    	        
+	        
+		\section{Android}
+		\begin{itemize}
+          \item Keine fest vorgeschriebene Hardware (SDK lauffähig unter
+          Mac/Linux/Windows)
+          \item Entwicklungsumgebung frei wählbar (Eclipse, möglicherweise auch
+          Netbeans bzw. einfacher Texteditor\ldots)
+          \item Android Market muss nicht zwingend benutzt werden (Developer
+          Tools auf dem Gerät muss dafür aktiviert sein). Es kann von jeder
+          Quelle aus eine Anwendung auf das Gerät installiert werden.
+          \item Anwendung einfach auf dem Handy installierbar oder auf dem
+          Simulator zu Testen.
+        \end{itemize}
+        
+        Seit dem 12. November 2007 ist eine Vorabversion des Android-SDK von
+        Google verfügbar. Diese wurde sehr positiv von den Entwicklern
+        angenommen und wird seitdem kontinuierlich erweitert und geupdatet. 
+        
+        Androidunterstützte Geräte sind vor allem im Mobilfunkbereich sehr
+        gefragt. Allerdings gibt es auch viele Entwicklungen im Home
+        Entertainment, sowie für Netbooks, Tablet-PC's oder für
+        Festnetztelefone.
+        
+	        \subsection{Architektur} 
+	        
+	        Den Kern von Android bildet ein Linux-Kernel, der speziell auf geringen
+	        Energieverbrauch und effizientes Speichermanagement ausgelegt wurde
+	        (vgl. Restriktionen Smartphones <-> Desktop PC's).
+	        
+	        Die Android-Laufzeitumgebung stellt die Dalvik Virtual Machine (im
+	        Folgenden DVM genannt) dar. Sie bildet das Herzstück der Plattform.
+	        Android lässt sich komfortabel und komplett in Java programmieren.
+	        Allerdings sollte man nicht den Fehler machen und meinen es handle sich
+	        bei der DVM um die reguläre Java Virtual Machine.
+	        
+	        \begin{figure}
+			  %\begin{minipage}[b]{0.48\textwidth}
+			      \centering	% zentrieren
+			      \includegraphics[width=0.8\textwidth]{android_systemarchitektur}
+			      \caption{Die Android-Systemarchitektur}
+			      \label{fig:android-system}
+	% ''What is android?'' zuletzt besucht - 11.2010. [Online].
+	% Available: http://code.google.com/android/what-is-android.html
+			\end{figure}
+	
+	        \begin{quote}
+	        ``Die DVM und JVM sind grob gesehen sehr ähnlich, wobei sie sich aber in
+	        zwei Hinsichten grundlegend unterscheiden: Die DVM ist nicht als
+	        Stack-Maschine, sondern als Register-Maschine realisiert, und die
+	        Längen der Opcodes betragen bei der DVM zwei anstatt nur einem Byte.
+	        Eine auf Register basierte virtuelle Maschine holt ihre Bytecodes und
+	        Operanden aus (virtuellen) Registern. Dazu ist es natürlich
+	        erforderlich, dass die Operanden in Abhängigkeit des Opcodes in
+	        bestimmte Register geschrieben und von dort gelesen werden und nicht
+	        generell vom Stack geholt werden, wie es in einer Standard JVM
+	        geschieht." [Fokus09] 
+	        \end{quote}
+	
+			Der Vorteil daraus ist schnell ersichtlich. Bei den Registern handelt es sich
+			nämlich quasi um Zwischenspeicher direkt im Mikroprozessor, die die
+			Berechnungen über mehrere Zwischenergebnisse stark beschleunigen. 
+			
+			Da die Java-VM und der original Java-Bytecode lizenzrechtlich geschützt sind,
+			bediente sich Google eines Tricks, diese aussen vorlassen zu können. Die DVM
+			wird nicht explizit als Java-VM dargestellt und verarbeitet keinen
+			Java-Bytecode, sondern Android-eigenen Dex-Bytecode, der nicht unter die
+			Sun-Lizenz fällt. Es wird also gewohnterweise in Java programmiert und mit
+			Hilfe des Java-Compilers von Sun Bytecode in Form von .class-Dateien erzeugt.
+			Das Android eigene dx-Tool liefert aus dieser Quelle den Dex-Bytecode,
+			der in eine für Android-Geräte ausführbare .apk-Datei (sprich fertig
+			ausführbare Anwendung) gepackt wird. Da die Programmierschnittstelle der Java
+			SE von SUN bisher noch nicht patentrechtlich geschützt ist, werden hier somit
+			keine Rechte verletzt.
+			
+			\subsection{Android-Komponenten}
+			
+			Android stellt eine moderne Plattform für komponentenbasierte
+			Anwendungsentwicklung dar. Hintergrund hiervon ist, dass für jede neue
+			Applikation, die entwickelt werden soll das Rad nicht neu erfunden werden
+			muss. Komplette Anwendungen oder Teile dieser sollen auch in neu
+			entwickelten Anwendungen benutzbar sein. Erklären lässt sich dies an einem
+			Beispiel: 
+			
+			Vorinstalliert auf einem Standard Android-Gerät findet man Anwendungen wie
+			``Kontakte'' oder ``Telefon''. In diesen Anwendungen sind beispielsweise
+			Telefonnummern und Kontaktdaten gespeichert. Möchte man nun die Daten aus den
+			Anwendungen benutzen kann man über die Datenbank der entsprechenden App
+			(vorhandene Berechtigung vorausgesetzt) direkt auf die benötigten Werte
+			zugreifen.
+			
+			Sauber gliedern sich die einzelnen Android-Komponenten gemäß dem in der
+			Programmierung als Standard geltenden Model-View-Controller-Prinzips. %TODO:
+			%ref anhang!
+		
+			\textbf{``Activity''} übernimmt hier die Funktion des Views.
+			Oberflächenelemente anzeigen, auslesen von Eingabefeldern und Benutzereingaben werden von den
+			Activities behandelt. Man spricht hier von allen sichtbaren Bestandteilen
+			einer Anwendung.
+			
+			Für die Hintergrundprozesse ist im Android-Gerät der \textbf{``Service''}
+			zuständig. Analog zum Model-View-Controller-Prinzip würde man hier vom Controller
+			sprechen. Wichtig sind diese Services zum Beispiel, wenn Prozesse
+			weiterlaufen sollen, obwohl die Anwendungen vom Benutzer schon geschlossen
+			wurden (Beispiel Musik Player).
+			
+			Das Model ist im Allgemeinen für die Verwaltung der darzustellenden Daten
+			zuständig. Bei der Datenpersistenz in Android spricht man von
+			\textbf{``Content Provider''}. Über Berechtigungen können seine Daten
+			bestimmten Anwendungen zur Verfügung gestellt werden.
+			
+			Zusätzlich zu den Standardkomponenten im MVC haben wir bei Android
+			noch den \textbf{``Broadcast Receiver''}. Dieser empfängt Systemmeldungen z.B.
+			über Störungen des Netzwerks. Anwendungen haben so die Möglichkeit, auf einen
+			geänderten Systemzustand zu reagieren.
+	
+			
+			\subsection{Sicherheit}
+			
+			Das Sandbox-Prinzip: 
+			\begin{quote}
+	        ``Android führt Anwendungen in der Sandbox aus. Eine Sandbox ist eine
+	        eingeschränkte Laufzeitumgebung, in der bestimmte Funktionen verboten
+	        sind.'' [BeckerPant10], S. 27
+	        \end{quote}
+	
+			Eine Android-Anwendung besitzt aus der Sandbox heraus folgende Eigenschaften:
+			\begin{itemize}
+	          \item eigener Prozess
+	          \item für einen eigenen Betriebssystem-User
+	          \item eigene DVM
+	          \item eigener Bereich im Hauptspeicher (Heap)
+	          \item eigener Bereich im Dateisystem
+	        \end{itemize}
+			 
+	        Wird eine Anwendung gestartet, läuft sie unter dem Userkonto in einem
+	        eigenen Prozess. Programme sind in Linux gegen den Zugriff von außen
+	        geschützt, und dadurch kann auch kein unerlaubter Zugriff auf den
+	        Speicher der DVM erfolgen, die in diesem Prozess läuft.
+	        
+	        \subsection{Entwicklung}
+            
+            Prinzipiell ist man bei Android weder an Hardware noch Software zum
+            entwickeln gebunden. Empfohlen wird allerdings die Eclipse IDE mit
+            dem ADT Plugin.[ANDEV10], letzter Abruf 01.12.2010\\ Das Android
+            SDK kann dann entweder von Hand über die Konsole zum erzeugen
+            eines Projekts benutzt werden oder eben komfortabel über die IDE.
+            Anwendungen für die Androidplattform werden ausnahmslos in Java
+            geschrieben.
+            
+            %TODO: aufgehört, morgen weiterschreiben!
+
+            
+		\section{Windows Phone 7}
+		Relativ neu auf dem Markt ist das Windows Phone 7 (Verkaufsstart in
+		Deutschland: 3. November 2010). [Heise10], letzter Abruf 30.11.2010\\ 
+		Damit will Microsoft sein leicht angestaubtes Mobilbetriebssystem auf den
+		neuesten Stand bringen und zu iOS und Android aufholen. Erste Testberichte
+		zeigen, dass Windows Phone 7 bis jetzt ein zweischneidiges Schwert ist.
+		
+		Microsoft ist es gelungen eine einfach zu bedienende Oberfläche zu
+		erstellen, die sich von iOS und Apple abhebt. Den signifikanten Unterschied
+		stellen die ``Live Tiles'' dar. Diese sind in verschiednen Größen auf dem
+		Home Bildschirm darstellbarer Inhalt, der quasi live mit Informationen
+		aktualisiert wird.
+		
+		Ausserdem stellt Microsoft klare Anforderungen an die Hardware für sein
+		Betriebssystem. Windows Phone 7 benötigt einen Prozessor mit mindestens 1
+		GHZ Taktfrequenz und einen internen Speicher von 8 GB. Dementsprechend
+		flüssig und ohne Verzögerung laufen auch die meisten Anwendungen auf den
+		Geräten, die den hohen Auflagen genügen.
+		
+		Programmiert wird hier in Silverlight beziehungsweise XNA. Silverlight ist
+		aus dem WPF (Windows Presentation Framework) heraus entstanden und auf
+		verschiedenen Plattformen und Browsern lauffähig. Das XNA Game Studio wurde
+		in der Vergangenheit für die Entwicklung von Spielen auf dem PC bzw. der
+		XBOX 360 benutzt. 
+		
+		Zumindest die Entwicklung mit dem XNA Game Studio ist kostenlos und wird als Add
+		On für das Visual Studio 2010 Express verwendet. Als Entwicklungsplattform ist
+		Microsoft also ähnlich strikt wie Apple angesiedelt und lässt dies nur auf dem
+		eigenen Betriebssystem zu.
+						
+		\section{Symbian}
+		
+		%evtl. noch Meego bzw. Maemo
+		
+		Entwickelt wird auf Symbian mit dem Qt SDK, welches für Windows,
+		Linux oder Mac OS X verfügbar ist. Alternativ lässt sich auch der
+		Eclipse-Ableger Carbide verwenden. Programmiert wird in C++. In Nokias Ovi
+		Store kann die eigene Applikation vertrieben werden. Entwickler können sich
+		in diesem für einmalig 50 Euro anmelden.
+		
+		Wie bereits erwähnt befindet sich das Betriebssystem Symbian auf dem
+		absteigenden Ast. Der Ansatz von Nokia das Betriebssystem seit dem 24. Juni
+		2008 unter der Open-Source-Lizenz zu veröffentlichen führte leider nicht mehr
+		dazu, dass es wesentlich populärer wurde. Zu lange haben Nokia \& Co.
+		gewartet.
+		
+		Nur noch bis zum 17. Dezember 2010 werden die Internetsites von Symbian mit
+		Hilfen, Artikeln, FAQs, Tipps, Tricks und Historie online sein. Damit
+		beendet Nokia seine Web-Präsenz für die Open Source-Entwicklung. Die Daten
+		sollen, so die Symbian Foundation, aber auch weiterhin erhältlich sein. Das
+		ist offiziell das sichtbare Ende der Symbian-Unabhängigkeit und der Neustart
+		unter der Ägide des Mutterkonzerns Nokia. Nokia gab bekannt, dass ``aufgrund der
+		Marktentwicklung die Weiterführung des Projekts nicht mehr sinnvoll'' sei.
+		[Symbian10], letzter Aufruf: 02.12.2010
+		
+		In Zukunft sollen Mobiltelefone von Nokia mit MeeGo angetrieben werden, einem
+		offenen Linux-System, das seine Wurzeln einerseits in Nokias Maemo und
+		andererseits in dem von Intel initiierten Moblin hat. [CT10], Seite 93
+			
+		\section{BlackBerry OS}
+		
+		Für Blackberrys gibt es vergleichsweise wenige Apps. Dies liegt sicher daran,
+		dass diese Geräte häufig dienstlich genutzt werden und viele Firmen die
+		Installation von Dritt-Anwendungen einschränken und/oder verbieten.
+		
+		Research In Motion (kurz RIM) setzt auf das im Vergleich zu aktuellen
+		Java-Versionen abgespeckte Java ME. Dies entspricht ungefähr dem Stand von
+		Java SE 1.3, allerdings mit zusätzlichen Bibliotheken für die Entwicklung
+		von Software bei Mobiltelefonen.
+		
+		Empfohlen wird die Entwicklung mit Eclipse und einem entsprechenden Plug-in.
+		Testen lässt sich die selbstgeschriebene Applikation mit einem Simulator für
+		fast jedes Gerät von RIM. Allerdings ist der Zugriff auf viele APIs nur mit
+		einer digitalen Signatur mögliche. Diese lässt sich RIM einmalig mit 20 \$
+		finanzieren. Möchte man seine selbstgeschriebene Applikation im RIM eigenen
+		Appstore vertreiben werden noch einmal 200 \$ fällig.
+		
+		\section{HP webOS}
+		
+		Palm setzt mit seinem Betriebssystem auf Webstandards. Apps werden mit
+		JavaScript, HTML5 und CSS geschrieben. Auch hier findet das MVC Prinzip
+		einzug. Views werden als normale HTML-Dateien erstellt (mit Palm-proprietären
+		Attributen und Styles). Controller werden mit Hilfe von JavaScript-Klassen
+		dargestellt mit definierten Einstiegspunkten und Callbacks. Für die
+		Persistenzschicht zum dauerhaften Speichern der Daten stehen HTML5-konforme
+		APIs und SQLite-Datenbanken zur Verfügung.
+		
+		Das WebOS-SDK iust für Windows, Mac OS X und Linux verfügbar. Zusätzlich
+		bietet Palm ein Eclipse-Plug-in zum einfachen Packen und starten der
+		Anwendung aus der IDE sowie der freien Virtualisierungssoftware VirtualBox
+		basierenden Emulator. Alternativ kann mittels ``Ares'' im Webbrowser
+		entwickelt werden. Dieser besteht aus einer Projekt-Verwaltung, einem
+		JavaScript-Editor und einem WYSIWYG-Editor.
+		
+		Fertige Anwendungen werden nicht signiert und liegen im Quellcode vor. Dies
+		ist nicht ganz unkritisch, da diese leicht entpackt und verändert werden
+		können, zum Beispiel zum aushebeln von Sicherheitsmechanismen, indem einfach
+		die spezielle JavaScript-Zeile auskommentiert wird.
+		
+		Die zuvor festgelegte Gebühr in höhe von 99 \$ zur Teilnahme am
+		Entwicklerprogramm hat Palm ausgesetzt. Von daher entstehen im Moment keine
+		zusätzlichen Kosten bei der Entwicklung bzw. beim Publishing im Market.
+		
+		\section{WebApp}
+		
+		%TODO: Holperdistolper und unvollständig
+		Eine schnell umzusetzende Applikation für alle verfügbaren Betriebssysteme
+		im Mobilbereich wäre eine Browserbasierte Lösung. Diese kann natürlich für
+		mobile Geräte im Hinblick auf Darstellung und Benutzbarkeit optimiert werden.
+		
+		Die Entwicklung würde sehr schnell von statten gehen, da die benutzte Technik
+		weit verbreitet ist und gängige Browser im Mobilbereich die Standards der
+		Webprogrammierung unterstützen.
+		
+		Leider ist es dabei aber nicht möglich auf die gerätespezifischen
+		Eigenschaften zuzugreifen. Es gibt zwar Ansätze wie beispielsweise Sencha
+		Touch, in der sich das Userinterface den entsprechenden Geräten anpassen
+		lässt, aber Kamera, GPS \& Co. sind aus Sicherheitsgründen nicht über ein
+		Webinterface ansprechbar (Einzig Lokalisierungsdienste wie Google bieten hier
+		eine Ausnahme). So ist die Entwicklung einer WebApp doch relativ beschränkt und nur
+		für Anwendungen zu benutzen, die nicht auf die Hardware des Geräts zugreifen müssen. 
+		
+		Eine gute Kombination aus WebApp und nativen Apps bieten Cross-Platform
+		Development Tools, welche im Folgenden beschrieben werden.
+		
+					
+		\section{Cross-Platform Development Tools}
+            
+            Unter Cross-Platform development versteht man im Allgemeinen ein
+            Framework, das es ermöglicht Applikationen auf mehreren Endgeräten zu
+            deployen. Im Vordergrund steht nicht die Performance der Anwendung,
+            sondern die Kompatibilität mit verschiedenen Betriebssystemen und deren ``look
+            and feel'' so nahe wie möglich zu kommen. [CT10], S. 96
+            
+            Zur Zeit befinden sich die Frameworks
+            PhoneGap\footnote{http://www.phonegap.com},
+            Titanium\footnote{http://www.appcelerator.com/} und
+            Rhodes\footnote{http://rhomobile.com/} (evtl. + Sencha Touch) sich
+            auf dem Markt. All diese basieren auf Webtechniken und zielen
+            speziell auf Webentwickler ab, da diese ihre Fähigkeiten direkt
+            für die Smartphone Apps Welt benutzen können (Vgl. Tabelle \ref{tab:cross-platform}).
+            
+            PhoneGap und Titanium werden mit Hilfe von HTML, CSS und JavaScript
+            programmiert. Beide benutzen JavaScript APIs, um auf die nativen
+            Gerätefunktionen des Smartphones zugreifen zu können
+            (Beispielsweise GPS, Accelerometer, Sound). Im Gegensatz dazu wird
+            in Rhodes mit Ruby gearbeitet. Es bietet eine komplette
+            Serverumgebung auf dem Gerät und dadurch Zugriff auf die nativen
+            Funktionen.
+            
+            PhoneGap und Titanium greifen über bestimmte JavaScript APIs auf
+            die Funktionen der Smartphones zu. Die Logik (HTML, CSS,
+            Javascript) wird allerdings in einem Browserfenster angezeigt.
+            Durch die JavaScript APIs hat die ``Web App'' sozusagen Zugriff auf
+            alle interessanten Funktionen des Handys, wie zum Beispiel die
+            Geolocation, das Accelerometer, die Kamera, Kontakte, Datenbank
+            oder das File System.
+			
+			Prinzipiell kann jede Funktion, die das Smartphone SDK anbietet in die
+			Javascript Welt überführt werden. Eine normale Web App, die im mobilen
+			Browser des Handys läuft könnte zum Beispiel nicht auf diese Funktionen
+			zugreifen (Sicherheitsaspekt).
+			
+			Auf der Titanium Webseite wird damit geworben, dass dafür entwickelte
+			Anwendungen in native Anwendungen für das zu entwickelnde System kompiliert
+			werden können. Man darf das allerdings nicht falsch verstehen. Titanium kann
+			kein HTML, CSS oder JavaScript in nativ geschriebene Anwendungen umwandeln.
+			Diese werden einfach als Ressourcen zu der ausführbaren App hinzugefügt. Am
+			besten stellt man es sich so vor, wie ein eingebettetes Bild. Wenn die App
+			ausgeführt wird, werden diese Ressourcen in den ``UIWebView'' geladen und als
+			JavaScript ausgeführt.
+	
+			Genau so wird es auch in PhoneGap gemacht. Hinsichtlich Architektur sind
+			sich beide Frameworks sehr ähnlich. Ein wesentlicher Unterschied ist, dass
+			PhoneGap nicht die nativen Userinterfacekomponenten in JavaScript zur
+			Verfügung stellt. Das ``Look and Feel'' muss mittels CSS selbst aufbereitet
+			werden. Im Gegensatz dazu bietet Titanium eine starke UI API, die mittels
+			JavaScript dazu benutzt werden kann alle möglichen Arten von nativen UI
+			Kontrollen zu erzeugen. Im direkten Vergleich sehen deswegen Titanium Apps
+			eher wie direkt für das Smartphone geschriebene Apps aus. Allerdings
+			unterstützt PhoneGap mehr verschiedene Betriebssysteme als Titanium. Die
+			PhoneGap APIs sind allgemeiner gefasst und können so auf vielen
+			verschiedenen Systemen wie z.B. iPhone, Android, Blackberry oder Symbian
+			laufen. Titanium konzentriert sich auf das iPhone und den Android Markt.
+								
+			Mit Hilfe des Rhodes Frameworks wird es Entwicklern gestattet native Apps zu
+			erstellen mit der Möglichkeit HTML Templates zu erstellen und in Ruby zu
+			programmieren. Apps, die mit Rhodes entwickelt werden haben die Performance
+			und die Fülle von Apps, die nativ für das entsprechende System geschrieben
+			wurden mit dem Vorteil, dass das Interface in HTML verfasst wird. Ausserdem
+			sehr positiv fällt auf, dass Rhodes das MVC Prinzip verwendet und somit
+			Logik und Anzeige strikt getrennt sind.
+			
+			Entwickler mit Railserfahrung werden sicherlich schneller mit Rhodes
+			zurechtkommen. Das Framework hat übrigens auch Grenzen. Diese manifestieren
+			sich vor allem darin, dass es keinerlei Integration von Audio oder Video in
+			den einzelnen Apps gibt. Rhodes bietet auch an, dass man Funktionen aus den
+			nativen APIs des Systems aufrufen kann, wenn diese nicht im Framework
+			unterstützt werden sollten. Jedoch sollte man sich nicht darauf verlassen,
+			dass diese dann flüssig ablaufen.
+
+			Worin sich jedoch alle Produkte voneinander abheben ist die
+			Entwicklerlizenz. PhoneGap ist Open-Source und kann frei genutzt werden.
+			Titanium befindet sich noch im Betastadium, wird aber in Zukunft ein
+			kommerzielles Produkt werden. Rhodes ist bereits kommerziell und kostet 500
+			\$ pro Projekt. Die Summe muss vor Beginn der Entwicklung bezahlt werden.
+			
+	        \begin{table}%[h]
+	        	\centering \leavevmode %Tabelle zentrieren
+		        \caption{JavaScript-Frameworks für mobile
+		        Apps}\footnotemark
+		        \label{tab:cross-platform}
+		        %\addtocounter{footnote}{+1}
+		        \begin{tabular}{|l|l|l|l|}
+		        \hline
+		        Name & PhoneGap & Titanium Developer & Rhodes\\
+		        \hline
+		        \hline
+		        App-Typ & quasi-nativ & quasi-nativ & (quasi-)nativ\\
+		        \hline
+		        Hersteller & Nitobi & Appcelerator & Rhomobile\\
+		        \hline
+		        Betriebssysteme & alle(Eclipse) & Windows, Linux, Mac OSX & Windows,
+		        Mac OSX\\
+		        \hline
+		        Lizenz & MIT & Apache & MIT\\
+		        \hline
+		        Programmiersprache & JavaScript & JavaScript & Ruby\\
+		        \hline
+		        Plattformen & & &\\
+		        \hline
+		        \hline
+		        Android & $\surd$  & $\surd$  & $\surd$ \\
+		        \hline
+		        iPhone & $\surd$ & $\surd$ & $\surd$\\
+		        \hline
+		        WebOS & $\surd$ & x & x\\
+		        \hline
+		        Symbian & $\surd$ & x & $\surd$\\
+		        \hline
+		        Blackberry & $\surd$ & $\surd$(nur Pro-Version) & $\surd$\\
+		        \hline
+		        Windows Mobile & $\surd$ & x & $\surd$\\
+		        \hline
+		        \end{tabular}
+			\end{table}
+			%\addtocounter{footnote} 
+			\footnotetext{[CT10], S. 101}
+			
+% 		\subsection{atvise}		
+% 		\begin{itemize}
+%           \item Web-basierte Lösung. 1 Server für alle Geräte mit Browser
+%           \item Wirbt für Mobile Endgeräte (speziell auch iPhone)
+%           \item Darstellungsfehler im Safari beim surfen auf der LiveDemo mit
+%           dem iPhone
+%           \item iPhone Safari stürzt bei animierter Darstellung ab?!?
+%         \end{itemize}

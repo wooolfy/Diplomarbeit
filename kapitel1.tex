@@ -1,0 +1,461 @@
+\chapter{Einleitung und Aufgabenstellung}
+\begin{itemize}
+  \item Kontext für den/die Leser herstellen
+  \item Am besten schreiben, wenn die Arbeit im groben fertig ist
+\end{itemize}
+	%\section{Motivation}
+		
+	\section{Zielsetzung und Beschreibung der Aufgabenstellung}
+    
+    Ziel dieser Arbeit ist es aufzuzeigen, ob die Kommunikation zwischen einer
+    Fertigungsmaschine und einem Smartphone sinnvoll ist, und welche konkreten
+    Vorteile dies bietet im Vergleich zu einer Feststation mit HMI.
+      
+    Als Lösungsanbieter für Abfüll- und Verpackungsanlagen stellt KHS
+    Fertigungsmaschinen für die Industrie her. Die Bedienung dieser Maschinen
+    beim Kunden erfolgte in der Vergangenheit direkt an der Maschine über das
+    Human Machine Interface (später als HMI bezeichnet).
+    
+    Auf Grund der steigenden Verbreitung von Smartphones und der damit
+    verbundenen Möglichkeiten soll nun im Rahmen dieser Diplomarbeit überprüft
+    werden, inwiefern eine Kommunikation zwischen einer Smartphone Applikation
+    und einer von KHS hergestellten Fertigungsmaschine sinnvoll sein kann. Es
+    werden hier nicht nur die technischen Rahmenbedingungen geklärt, sondern
+    auch wirtschaftliche Aspekte im Hinblick auf Verbreitung und Marketing
+    aufgezeigt.
+    
+    Dabei sollen verschiedene Modelle von derzeit gebräuchlichen Smartphones
+    untersucht werden im Hinblich auf Einstiegsbeschränkungen zur Entwicklung
+    und die Komplexität eine solche Anwendung zu erstellen. Auch
+    Zusatzkosten spielen hier eine Rolle. Es sollen
+    möglichst viele Smartphones bedient werden können. Dies bedeutet in der
+    Entwicklung einen erheblichen Aufwand, da sich die einzelnen mobilen
+    Endgeräte sehr unterscheiden. Über den Ansatz der ``Model Driven
+    Architecture'' wird ein generisches Konzept für eine
+    Applikation entwickelt und erläutert wie sich dieses im Anschluss für
+    verschiedene Endgeräte umsetzen lässt. Mögliche Lösungsansätze für diese
+    Probleme werden konkret aufgezeigt.
+    
+    Weiterhin relevant stellen sich die Rahmenbedingungen der
+    Smartphonehersteller dar. In dieser Arbeit wird dargelegt, welche
+    speziellen Restriktionen sich nicht nur allgemein in der Hardware befinden
+    (Display, Prozessor, spezielle Funktionen der Geräte), sondern speziell
+    auch vom Hersteller vorgegeben werden. Unter anderem die Voraussetzungen
+    für die entsprechende Hardware entwickeln zu können. Bei den meisten
+    Open-Source Betriebssystemen steht die Wahl der Entwicklungshardware und
+    -umgebung relativ frei. 
+    
+%     Ein gutes Beispiel ist hier Android, welches dem
+%     Entwickler völlig freie Hand lässt. Bei der der Entwicklung entstehen
+%     nur die tatsächlichen Kosten für die Programmierung, da die Entwicklungsumgebung
+%     (SDK) kostenfrei von Google zur Verfügung gestellt wird. Ganz im Gegenteil
+%     zum Mitbewerber Apple, bei dem auch die Entwicklungshardware vom selbigen
+%     Hersteller eingekauft werden muss. Zwar ist es möglich, seine Applikationen
+%     in Apples eigens dafür vorgesehenem Simulator zu testen. Für einen
+%     Test auf dem eigentlichen Gerät jedoch muss der Umweg über den Apple App
+%     Store gegangen werden. [Koller10]
+    
+    Ein konkretes Programm soll in Form eines Prototyps erst genau spezifiziert,
+    dann mit Hilfe der Modellgetriebenen Softwareentwicklung (kurz MDA)
+    ansatzweise auf möglichst viele mobile Endgeräte umsetzbar gemacht werden.  
+    
+    Es werden verschiedene Erwartungshaltungen formuliert im Hinblick auf die
+    unterschiedlichen Eigenschaften der Endgeräte. Bei der Softwareerstellung
+    muss vermehrt auf diese Restriktionen eingegangen werden. Ein kleines Display
+    und diverse andere Eigenschaften der Smartphones müssen durch ein
+    geeignetes Design des Userinterfaces abgedeckt werden.
+   
+    Diese Diplomarbeit soll als Grundgerüst für zukünftige Entscheidungen und
+    Entwicklungen im Bereich Apps für Smartphones dienen und einen konkreten
+    Anhaltspunkt darüber geben, ob Entwicklung in dieser Sparte überhaupt
+    sinnvoll erscheint.
+    
+    \section{Das Unternehmen KHS}
+		%\begin{itemize}
+        	%\item kurz eingehen auf Geschichte KHS (1-2 absätze)
+        	%\item Standorte und aufgabengebiete/tagesgeschäft
+        %\end{itemize}
+        
+        %TODO: mehr????
+        Diese Diplomarbeit wird als Studie für die KHS GmbH erstellt. 
+        
+        \begin{quote}      
+        ``KHS ist Lösungsanbieter technologisch innovativer und
+        hochwertiger Abfüll- und Verpackungsanlagen für die Getränke- und
+        Nahrungsmittelindustrie. Mit mehr als 5.500 Mitarbeitern weltweit
+        realisiert der zentral von Dortmund aus geführte Konzern heute einen
+        Jahresumsatz von fast einer Milliarde Euro. Neben Produktionsstätten
+        in den USA, Mexiko, Brasilien, Indien und China ist KHS mit mehreren
+        Werken in Deutschland vertreten.
+
+		Das Unternehmen ist eine 100-prozentige Tochtergesellschaft der Salzgitter
+		AG, einem der führenden Stahl- und Technologie-Konzerne Europas.
+
+		Seit 2008 sind die Unternehmen KHS Corpoplast, KHS Plasmax, KHS Moldtec und
+		KHS Asbofill in den Klöckner-Konzern integriert. Damit ist die KHS
+		insbesondere im Bereich ganzheitlicher PET-Lösungen bestens aufgestellt. Durch
+		neue Entwicklungen wie Trockenteil-Lösungen in Modulbauweise, universelle
+		Füllsysteme, Hochleistungs-Etikettiertechnik oder moderne Kommunikations- und
+		Diagnosetechniken festigt die KHS fortlaufend ihre Position als Innovator im
+		Markt.'' [KHS10], letzter Abruf: 21.11.2010
+		\end{quote} 
+        
+		
+        
+    
+% 		\begin{itemize}
+%           \item Entwicklung von KHS Apps für Handys zur Kommunikation mit
+%           Maschinen und Linien der KHS
+%         \end{itemize}
+        
+%         Dazu werden verschiedene Aspekte eruiert hinsichtlich 
+
+% \chapter{Kapitelname}
+% 
+% \section{Überschrift 1. Ordnung}
+% 
+% \subsection{Überschrift 2. Ordnung}
+% 
+% \subsubsection{Überschrift 3. Ordnung}
+% 
+% \paragraph{Überschrift 4. Ordnung}
+% 
+% \subparagraph{Überschrift 5. Ordnung}
+% 
+% \begin{center}
+% Zentrierter Text
+% \end{center}
+% 
+% \begin{flushleft}
+% Linksseitiger Text
+% \end{flushleft}
+% 
+% \begin{flushright}
+% Rechtsseitiger Text
+% \end{flushright}
+% 
+% Verschiedene Schriftformen:
+% \\ % ein Zeilenumbruch
+% \textit{Kursiver Text}
+% \textsl{Schräg gestellter Text} % Unterschied zu kursiv = ???
+% \textbf{Fettgedruckter Text} 
+% \textsc{Text in Kapitälchen} 
+% \texttt{Text in Nicht-Proportionalschrift}
+% \par % Neuer Absatz (explizite Form)
+% \newpage % Neue Seite erzwingen
+% 
+% Eine Auflistung:
+% \begin{itemize}
+% \item Eins
+% \item Zwei
+% \item Drei
+% \end{itemize} 
+% 
+% \bigskip % einen größeren Abstand einfügen
+% 
+% Eine durchnummerierte Aufzählung:
+% \begin{enumerate}
+% \item Eins
+% \item Zwei
+% \item Drei
+% \end{enumerate} 
+% 
+% \bigskip % einen größeren Abstand einfügen
+% 
+% Eine Beschreibungsumgebung:
+% \begin{description}
+% \item[Zu beschreibender Begriff] Beschreibender Text
+% \item[Noch ein zu beschreibender Begriff] Ein langer Text der den Begriff beschreibt wird automatisch eingerückt wenn er länger als eine Zeile ist. Das sieht dann so aus. 
+% \end{description} 
+% 
+% %\begin{list}{Label}{}
+% %\item Eins
+% %\item Zwei
+% %\end{list} 
+% 
+% \newpage
+% \section{Tabellen}
+% 
+% Es gibt Tabellen die fest im Text verankert sind. Sie erscheinen immer dort und können keine Tabellebezeichnung und somit keine Nummer bekommen:\\
+% 
+% \begin{tabular}{ccc}	% eigentliche Tabellenumgebung beginnen: {ccc} = 3 Spalten, zentriert
+% \hline			% horizontale Linie
+%  Ich bin & ein feste & Tabelle \\ % Spalten mit & trennen und Zeile mit \\ beenden
+% \hline\hline		% doppelte horizontale Linie
+%  a & b & c \\ 		% nächste Zeile
+% \hline			% horizontale Linie
+% \end{tabular} 
+% 
+% Besser sind aber die gleitenden Tabellen. Man kann angeben wo sie erscheinen sollen: An der Stelle wo man sie hingeschrieben hat, oben an der Seite, unten an der Seite oder auf einer extra Seite nru für gleitende Objekte. 
+% 
+% % Beispiel für eine gleitende Tabelle
+% \begin{table}	% Gleitende Tabelle beginnen: Position am besten bei: h = here, t = top, b = bottom, p = page (auf eigener Seite) - LaTex versucht die Positionierung in dieser Reihenfolge
+% % Die Angabe nur von "h" um die Positionierung an einer Stelle zu erzwingen läßt LaTeX nicht zu, wenn die Tabelle dann an einer unmöglichen Stelle erscheinen würde
+% \centering \leavevmode	% zentrieren
+% \caption{Eine gleitende Tabelle}	% Tabellenbeschrieftung
+% \begin{tabular}{ccc}	% eigentliche Tabellenumgebung beginnen: {ccc} = 3 Spalten zentriert
+% \hline			% horizontale Linie
+%  Name & Vorname & Sonstiges \\ % Spalten mit & trennen und Zeile mit \\ beenden
+% \hline\hline		% doppelte horizontale Linie
+%   & b & c \\ 		% nächste Zeile
+% \cline{2-3}		% horizontale Linie, nur von Spalte 2 bis 3
+%  \raisebox{1.5ex}[-1.5ex]{A} & b & c \\ 	% Text über zwei Zeilen: Zeile vorher freilassen, diese Zeile mit \raisebox{höhe}[-höhe]{Text} hochheben (1ex = normale Zeilenhöhe)
+% \multicolumn{2}{c}{Doppelspaltig} & c \\
+% \hline			% horizontale Linie
+% \end{tabular} 
+% \end{table}
+% 
+% % Noch ein Beispiel für eine gleitende Tabelle
+% \begin{table}	% Gleitende Tabelle beginnen
+% \centering \leavevmode	% zentrieren
+% \caption{Eine andere gleitende Tabelle}	% Tabellenbeschrieftung
+% % eigentliche Tabellenumgebung beginnen:
+% \begin{tabular}{|l|c|p{0.5cm}|r|}	 % | = vert. Strich, l = links, c = zentriert, p{breite} = feste Breite, r = rechts
+% % Also: hier vier Spalten mit vertikalen Linien. Sie sind links, mittig, 0.5cm breit und rechts ausgerichtet.
+% \hline			% horizontale Linie
+%  Name & Vorname & \# & Sonstiges \\ % Spalten mit & trennen und Zeile mit \\ beenden
+% \hline\hline		% doppelte horizontale Linie
+%  a & b & 0 & c \\ 		% nächste Zeile
+% \hline			% horizontale Linie
+% \end{tabular} 
+% \end{table}
+% 
+% Um eine überlange Tabelle über mehrere Seiten zu erzeugen statt die tabular die longtable Umgebung (Paket longtable) verwenden. Ein Beispiel findet man im Fußnotenabschnitt.
+% 
+% \newpage	% neue Seite einleiten (Achtung: ggf. schlechter Stil!)
+% \section{Bilder}
+% 
+% \begin{figure}	% Beginn des gleitenden Bildes
+%    \centering	% zentrieren
+%    \includegraphics[scale=0.5]{beispiel}% Bild einfügen. Am besten nur Dateinamen ohne Erweiterung angeben; hier um Faktor 0.5 skaliert
+%    \caption{Ein Beispielbild (skaliert)}	% Bildbezeichnung
+%    \label{fig:beispiel1}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \begin{figure}	% Beginn des gleitenden Bildes
+%    \centering	% zentrieren
+%    \includegraphics[scale=0.5,angle=45]{beispiel}% Bild einfügen. Um Faktor 0.5 skaliert und um 45 Grad gegen den Uhrzeigersinn gedreht
+%    \caption{Ein gedrehtes Beispielbild}	% Bildbezeichnung
+%    \label{fig:beispiel2}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \begin{figure}	% Beginn des gleitenden Bildes
+%    \centering	% zentrieren
+%    \includegraphics[width=0.6\textwidth]{beispiel}% Bild einfügen. Auf 60% der Textbreite skalieren
+%    \caption{Ein Beispielbild mit 60\% der Textbreite}	% Bildbezeichnung
+%    \label{fig:beispiel3}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \begin{figure}	% Beginn des gleitenden Bildes
+%    \centering	% zentrieren
+%    \includegraphics[height=1cm,width=2cm]{beispiel}% Bild einfügen. Höhe auf 1cm und Breite auf 2cm festlegen
+%    \caption{Ein Beispielbild, 1cm hoch und 2cm breit}	% Bildbezeichnung
+%    \label{fig:beispiel4}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \begin{figure}	% Beginn des gleitenden Bildes
+%    \centering	% zentrieren
+%    \includegraphics[draft]{beispiel} % Bild einfügen aber nicht anzeigen, sondern anstatt einen Rahmen mit dem Pfad einblenden (kann auch global mit \usepackage[draft]{graphicx} im Präambel eingestellt werden)
+%    \caption{Ein Beispielbild, nur Platzhalter mit Bildpfad dargestellt}	% Bildbezeichnung
+%    \label{fig:beispiel5}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% Und so referenziert man ein Bild: Bild \ref{fig:beispiel2} auf Seite \pageref{fig:beispiel2} zeigt ein Beispiel. Geht auch vor dem referenzierten Bild wie man bei Bild \ref{fig:beispiel6} auf \pageref{fig:beispiel6} sieht.
+% 
+% \begin{figure}	% Beginn des gleitenden Bildes
+%    \centering	% zentrieren
+%    \framebox{	% Erzeugt Rahmen um das Bild
+%    	\includegraphics[bb=20 50 110 100,clip]{beispiel} % Bild mit der angegebenen BoundingBox (bb=x1 y1 x2 y2) clippen
+%    } % Ende von \framebox{
+%    \caption{Ein Ausschnitt des Beispielbildes mit Rahmung}	% Bildbezeichnung
+%    \label{fig:beispiel6}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \clearpage	% neue Seite einleiten, alle Gleitobjekte (Tabellen, Bilder) anzeigen
+% \subsection{Zwei Bilder nebeneinander}
+% 
+% \begin{figure}
+%    \centering	% zentrieren
+%    \includegraphics[scale=0.5]{beispiel}	% erstes Bild
+%    \quad					% Ein wenig Abstand dazwischen (/qquad wäre ein größerer Abstand)
+%    \includegraphics[scale=0.5]{beispiel}	% zweites Bild
+%    \caption{Zwei Bilder mit einer gemeinsamen Bildunterschrift}	% Bildbezeichnung
+%    \label{fig:beispiel7}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% Sind die Bilder zu groß um nebeneinader dargestellt zu werden, werden sie untereinander dargestellt:
+% 
+% \begin{figure}
+%    \centering	% zentrieren
+%    \includegraphics[width=0.6\textwidth]{beispiel}	% erstes Bild (künstlich vergrößert)
+%    \quad					% Ein wenig Abstand dazwischen (hier sinnvoll?)
+%    \includegraphics[width=0.6\textwidth]{beispiel}	% zweites Bild (künstlich vergrößert)
+%    \caption{Zwei große Bilder mit einer gemeinsamen Bildunterschrift}	% Bildbezeichnung
+%    \label{fig:beispiel8}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% Um das zu verhindern kann man eine makebox (oder eine framebox) um die Bilder ziehen. Dann wird aber u.U. in den Rand gezeichnet. Beispiel:
+% 
+% \begin{figure}
+%    \centering	% zentrieren
+%    \framebox[\textwidth]{	% framebox (=Rahmen) mit der Breite des Textes erzeugen
+%    \includegraphics[width=0.6\textwidth]{beispiel}	% erstes Bild (künstlich vergrößert)
+%    \quad					% Ein wenig Abstand dazwischen
+%    \includegraphics[width=0.6\textwidth]{beispiel}	% zweites Bild (künstlich vergrößert)
+%    }
+%    \caption{Zwei große Bilder in einer Framebox}	% Bildbezeichnung
+%    \label{fig:beispiel9}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \clearpage
+% Hier nun zwei Bilder nebeneinander mit jeweils eigener Bildbeschreibung:
+% 
+% \begin{figure}
+%   \begin{minipage}[t]{0.48\textwidth}	% Minipage erzeugen, [t] = Am oberen Rand ausrichten
+%       \centering	% zentrieren
+%       \includegraphics[width=0.48\textwidth]{beispiel}
+%       \caption{Linkes Beispielbild (mit einem längeren Text als das rechte Bild)}
+%       \label{fig:beispiel10}
+%   \end{minipage}% Dies Prozent ist wichtig! (kein horiz. Abst. zw. minipages)
+%   \begin{minipage}{0.04\textwidth}
+%      \hfill % Damit die getrennte Beschriftung auch Abstand hat
+%   \end{minipage}%
+%   \begin{minipage}[t]{0.48\textwidth}
+%       \centering	% zentrieren
+%       \includegraphics[width=0.48\textwidth]{beispiel}
+%       \caption{Rechtes Beispielbild}
+%       \label{fig:beispiel11}
+%   \end{minipage}
+% \end{figure}
+% 
+% Da die Bilder gleich groß sind richten wir sie nach oben aus damit sie aufgrund der unterschiedlich langen Beschreibungstexte nicht horizontal verschoben werden. \\
+% Anonsten sollte man sie wohl unten ausrichten: (oder zentrieren)
+% 
+% \begin{figure}
+%   \begin{minipage}[b]{0.48\textwidth}
+%       \centering	% zentrieren
+%       \includegraphics[width=0.48\textwidth]{beispiel}
+%       \caption{Linkes Beispielbild (mit einem längeren Text als das rechte Bild)}
+%       \label{fig:beispiel12}
+%   \end{minipage}% Dies Prozent ist wichtig! (kein horiz. Abst. zw. minipages)
+%   \begin{minipage}{0.04\textwidth}
+%      \hfill % Damit die getrennte Beschriftung auch Abstand hat
+%   \end{minipage}%
+%   \begin{minipage}[b]{0.48\textwidth}
+%       \centering	% zentrieren
+%       \includegraphics[width=0.48\textwidth,height=9cm]{beispiel}
+%       \caption{Rechtes Beispielbild}
+%       \label{fig:beispiel13}
+%   \end{minipage}
+% \end{figure}
+% 
+% Erwähnenswert ist hier auch das Paket subfigure, das hier aber nicht besprochen wird.
+% 
+% \clearpage	% neue Seite einleiten, alle Gleitobjekte (Tabellen, Bilder) anzeigen
+% \subsection{Bilder mit \LaTeX\ zeichnen}
+% 
+% Vektorbilder kann man auch direkt unter \LaTeX\ zeichnen. \\
+% \textbf{Achtung!} Alles wird mit Hilfe von (ggf. skalierten) Textzeichen gezeichnet! Z.B. Kreise haben deswegen nicht umbedingt exakt die gewünschte Größe. Die Grundeinheit deswegen am besten in Punkten (bei Schriftarten üblich) und nicht in mm o.ä. angeben.
+% 
+% \setlength{\unitlength}{2mm}	% Einheit festlegen (Angabe in Punkten (pt) wäre besser, s.o.)
+% \begin{figure}[h]
+%    \centering	% zentrieren
+%    \begin{picture}(10,10)	% Bild mit Größe (10,10) (Einheit s.o.)
+%    	\put(0,0){\line(1,0){10}}	% Linie von (0,0) in Richtung (0,1) mit Länge 10 ziehen
+% 	\put(10,0){\line(0,1){10}}	% Linie von (10,0) in Richtung (0,-1) mit Länge 10 ziehen
+% 	\put(10,10){\line(-1,-1){10}}	% Linie von (0,10) in Richtung (-1,1) mit einer horzontalen Länge von 10 ziehen
+% 	\put(5,5){\circle{2}}	% Kreis bei (5,5) mit Durchmesser 2 ziehen
+% 	\put(5,5){\circle*{1}}	% ausgefüllten Kreis bei (5,5) mit Durchmesser 1 ziehen
+% 	\multiput(5,-1)(1,0){5}{\line(0,1){2}}	% Ein Objekt (hier Linie) mehrmals zeichnen: hier beginnend bei (5,-1) insgesamt 5 mal zeichnen immer um (1,0) versetzt.
+% 	% viele andere Zeichenelemente sind ebenfalls möglich 
+%    \end{picture}
+%    \caption{Eine mit \LaTeX\ gezeichnete Graphik}	% Bildbezeichnung
+%    \label{fig:beispiel14}	% Interne Bezeichnung um Bild im Text referenzieren zu können
+% \end{figure}
+% 
+% \clearpage
+% \section{Fußnoten}
+% 
+% Fußnoten\footnote{Dies ist übrigens eine Fußnote} werden direkt an die Stelle geschrieben wo die Fußnotenzahl erscheinen soll. Kein Leerzeichen \footnote{Noch eine Fußnote} vorher machen, sonst erscheint dieses im Text. 
+% 
+% In Tabellen kann man das aber so leider nicht machen. Da muß man die Fußnotenmarkierung manuell einfügen und den Fußnotentext dann nach der Tabelle manuell angeben: \\
+% 
+% \begin{table}[h]
+% \caption{Eine Tabelle mit einer Fußnote}
+% \center
+% \begin{tabular}{ccc}
+% \hline
+%  Name & Vorname\footnotemark & Sonstiges \\
+% \hline
+%  a & b & c \\ 
+% \hline
+% \end{tabular}
+% \end{table}
+% \footnotetext{Eine Tabellenfußnote}
+% 
+% Will man in einer Tabelle mehrere Fußnoten eintragen steht am Schluß der Tabelle leider der Fußnotenzähler an der letzen eingetragenen Fußnote. Um den Fußnotentext für die anderen Fußnoten angeben zu können muß man diesen Zähler vorher wieder zurückdrehen: \\
+% 
+% \begin{table}[h]
+% \caption{Eine Tabelle mit mehreren Fußnoten}
+% \center
+% \begin{tabular}[c]{ccc}
+% \hline
+%  Name\footnotemark & Vorname\footnotemark & Sonstiges\footnotemark \\
+% \hline
+%  a & b & c \\ 
+% \hline
+% \end{tabular} 
+% \end{table}
+% 
+% \addtocounter{footnote}{-3} % Anzahl der Fußnoten in der letzen Tabelle zurück
+% \addtocounter{footnote}{1}\footnotetext{Die erste Tabellenfußnote} % Zähler eins hochzählen und Text angeben
+% \addtocounter{footnote}{1}\footnotetext{Die zweite Tabellenfußnote} % dito, für dür die nächste Fußnote
+% \addtocounter{footnote}{1}\footnotetext{Die dritte Tabellenfußnote} 
+% 
+% \par
+% \bigskip
+% 
+% Bei Fußnoten in Formeln muß man das ebenfalls so machen. $ 1 + 1 =\footnotemark 2 $ 
+% \footnotetext{Fußnoten in Formeln? Sind Sie verrückt?}
+% 
+% \bigskip
+% 
+% \newcounter{fn} % Neuen Zähler erzeugen
+% Um ein und die selbe Fußnote mehrmals im Text erscheinen zu lassen\footnote{Mehrmals erscheinende Fußnote}\setcounter{fn}{\value{footnote}} % Fußnotennummer im Zähler speichern
+% kann man das manuell\footnote{Das ist aber unsicher, da sich die Nummer beim Einfügen von anderen Fußnoten ändern kann} so\footnotemark[11] oder besser so\footnotemark[\value{fn}] % Fußnotenmarkierung mit dem gespeicherten Wert einfügen.
+% machen.
+% 
+% 
+% \clearpage	% neue Seite einleiten, alle Gleitobjekte (Tabellen, Bilder) anzeigen
+% \section{Mathematische Formeln}
+% 
+% Für die Darstellung von Formeln muß \LaTeX\ in den sog. {\em Mathematischen Modus} wechseln.
+% Das geht in einen laufenden Text so: $ \int_a^b ( \exp (a \pi) ) da = \int\limits_a^b e^{a \pi} da $.
+% 
+% Freistehende Formeln macht man so:
+% \begin{equation}
+%  \sum\nolimits_{i=0}^{10} A = \sum\limits_{(i)}
+%  A % Zeilenumbruch und Leerzeichen unwirksam
+% \end{equation} 
+% 
+% Mehrere Formeln in einer Folge kann man so schreiben:
+% 
+% \begin{eqnarray}	% Zeilenumbruch wirksam!
+%   D := \sqrt[n]{ \sin a \pi } \\
+%   B := D^n \quad \Longrightarrow \quad B = \sin a \pi \\
+%   E := 1 \nonumber \\	% keine Formelnummer anzeigen
+%   \mbox{Eingefügter Text} \nonumber \\ % Text mit mbox einfügen
+%   F := \frac{D}{B+E} \\
+%   j^2 & = & -1  \\ % auch Ausrichtung mit & (wie in einer Tabelle) möglich
+%   \mbox{Sowas ist auch möglich: $ \int \left( 2 \cdot \mbox{Haha} \right) $} % Mehrfach eingekapselte Umgebung
+% \end{eqnarray} 
+% 
+% Große Klammern macht man so:
+% \begin{equation}
+%  \left\lbrace \frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+A}}}}} \right\rbrace 
+% \end{equation} 
+% 
+% bzw. mit runden Klammern:
+% \begin{equation}
+%  \left( \frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+\frac{1}{1+A}}}}} \right)
+% \end{equation} 
+
