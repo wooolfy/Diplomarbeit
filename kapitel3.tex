@@ -11,7 +11,8 @@ Hinweise zu weiterführender Literatur gegeben.
 	zu gehen (Abstraktionssprung der Programmiersprache). Ausgehend von der
 	Tatsache, dass Maschinensprachen über Assembler, Prozedurale Sprachen durch
 	Objektorientierte Sprachen abgelöst wurden lässt sich schlussfolgern, dass die
-	Zukunft des Software-Engineerings in den Modellierungssprachen liegt. [Gruhn06]
+	Zukunft des Software-Engineerings in den Modellierungssprachen liegt.
+	[Gruhn06], S. 14ff
 	
 	%TODO: Grafik aus Buch S. 15
 	
@@ -30,10 +31,23 @@ Hinweise zu weiterführender Literatur gegeben.
 		MDA arbeitet mit mehreren Schichten:
 		
 		\begin{itemize}
-          \item Computation Independent Model (CIM)
-          \item Platform Independent Model (PIM)
-          \item Platform Specific Model (PSM)
-          \item Platform Description Model (PDM)   %TODO: check: richtig?
+          \item Computation Independent Model (CIM)\\
+          		Das CIM liefert eine Sicht auf das Gesamtsystem unabhängig davon,
+          		wie es implementiert werden soll. Es enthält die Anforderungen des
+          		Systems an die Umwelt.
+          
+          \item Platform Independent Model (PIM)\\
+          		Das PIM beschreibt die formale Struktur und die Funktionalität des
+          		Systems.
+          		
+          \item Platform Specific Model (PSM)\\
+          		Durch Anreicherung des PIM mit plattform-abhängigen Informationen
+          		entsteht das PSM. 
+          		
+          \item Code\\   %TODO: check: richtig?
+          		Aus dem PSM wird der Quellcode für die Zielplattform generiert.
+				Meist entsteht dabei noch kein ausführbarer Code, sondern lediglich
+				ein Grundgerüst, das für die weitere händische Implementierung genutzt wird.  
         \end{itemize}
         
         Transformationen bilden die Grundlage für die Überführung von einer
@@ -55,7 +69,7 @@ Hinweise zu weiterführender Literatur gegeben.
           \item Systemintegration und Interoperabilität
           \item Effiziente Softwareentwicklung
           \item Domänen-Orientierung
-        \end{itemize} [Gruhn06]
+        \end{itemize} [Gruhn06], S. 21 ff
         
         Mehr Informationen zur Model Driven Architecture findet man auf der
         Webseite der OMG\footnote{http://www.omg.org} oder als Literatur
