@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2010.11.26)  3 JAN 2011 10:41
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2010.11.26)  3 JAN 2011 11:05
 entering extended mode
 **Diplomarbeit.tex
 (H:\workspace\Diplomarbeit\Diplomarbeit.tex
@@ -1496,14 +1496,14 @@ Kapitel 5.
 
 
 ] [25] [26] [27] [28]
-<images/microsoft_security_trends.jpg, id=390, 704.6325pt x 421.575pt>
+<images/microsoft_security_trends.jpg, id=392, 704.6325pt x 421.575pt>
 File: images/microsoft_security_trends.jpg Graphic file (type jpg)
 
 <use images/microsoft_security_trends.jpg> [29 <H:/workspace/Diplomarbeit/image
 s/microsoft_security_trends.jpg>]) [30] [31]
 (H:\workspace\Diplomarbeit\kapitel6.tex
 Kapitel 6.
-<images/MA_smartphones.jpg, id=407, 120.45pt x 72.27pt>
+<images/MA_smartphones.jpg, id=409, 120.45pt x 72.27pt>
 File: images/MA_smartphones.jpg Graphic file (type jpg)
 
 <use images/MA_smartphones.jpg> [32
@@ -1516,7 +1516,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 52.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 [33] [34] [35]
-<images/android_systemarchitektur.jpg, id=435, 536.75531pt x 385.44pt>
+<images/android_systemarchitektur.jpg, id=437, 536.75531pt x 385.44pt>
 File: images/android_systemarchitektur.jpg Graphic file (type jpg)
 
 <use images/android_systemarchitektur.jpg> [36 <H:/workspace/Diplomarbeit/image
@@ -1636,8 +1636,8 @@ Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: F36A3E333DF8D643CE16BBA2F828F513;2891.
  ) 
 Here is how much of TeX's memory you used:
- 13911 strings out of 494019
- 207567 string characters out of 3144344
+ 13913 strings out of 494019
+ 207599 string characters out of 3144344
  375834 words of memory out of 3000000
  16564 multiletter control sequences out of 15000+200000
  139254 words of font info for 96 fonts, out of 3000000 for 9000
@@ -1656,9 +1656,9 @@ ic/lm/lmr7.pfb><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmr8.pfb
 ><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmssbx10.pfb><H:/porta
 ble apps/miktex-portable/fonts/type1/public/lm/lmsy10.pfb><H:/portable apps/mik
 tex-portable/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Diplomarbeit.pdf (51 pages, 649199 bytes).
+Output written on Diplomarbeit.pdf (51 pages, 649914 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 168 named destinations out of 1000 (max. 500000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 170 named destinations out of 1000 (max. 500000)
  18796 words of extra memory for PDF output out of 20736 (max. 10000000)
 

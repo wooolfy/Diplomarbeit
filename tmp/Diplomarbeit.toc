@@ -20,6 +20,8 @@
 \contentsline {section}{\numberline {4.1}Gesch\"aftsvorfall f\"ur die umzusetzende App}{22}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Vorgaben}{22}{subsection.4.1.1}
 \contentsline {section}{\numberline {4.2}Anwendung auf die Anforderungsdefinition}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Vorhandene Modellierungs-/Transformationstools auf dem Markt}{23}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Wahl der zu benutzenden Tools}{23}{subsection.4.2.2}
 \contentsline {chapter}{\numberline {5}Sicherheit in mobilen Netzen}{24}{chapter.5}
 \contentsline {section}{\numberline {5.1}Sicherheitsprobleme in mobilen LANs und WANs}{24}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Bluetooth}{24}{subsection.5.1.1}
