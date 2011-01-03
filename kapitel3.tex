@@ -77,7 +77,38 @@ Hinweise zu weiterführender Literatur gegeben.
         von MDA (auch an Beispielen) eingegangen wird.
         
  %TODO       
-    \section{ISO/OSI Modell}
+    \section{ISO/OSI-Modell}
+    
+    OSI Model
+	Data unit 	Layer 	Function
+Host
+layers 	Data 	7. Application 	Network process to application
+6. Presentation 	Data representation, encryption and decryption, convert machine dependent data to machine independent data
+5. Session 	Interhost communication
+Segments 	4. Transport 	End-to-end connections and reliability,flow control
+Media
+layers 	Packet 	3. Network 	Path determination and logical addressing
+Frame 	2. Data Link 	Physical addressing
+Bit 	1. Physical 	Media, signal and binary transmission
+
+	\begin{table}%[h]
+    	\centering \leavevmode %Tabelle zentrieren
+        \caption{OSI-Modell}
+        \label{tab:iso-osi}
+        %\addtocounter{footnote}{+1}
+        \begin{tabular}{|l|l|l|}
+        	\hline
+        	\multicolumn{3}{|c|}{OSI Model}\\
+        	\hline
+       		Data Unit(Einheit) & Layer & Funktion\\
+       		\hline
+       		
+        	\hline
+        \end{tabular}
+	\end{table}
+			%\addtocounter{footnote} 
+			%\footnotetext{[CT10], S. 101}
+    
     
     \subsection{Layer}
     
