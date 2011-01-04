@@ -1,72 +1,12 @@
 \select@language {ngerman}
-\contentsline {chapter}{\numberline {1}Einleitung und Aufgabenstellung}{11}{chapter.1}
-\contentsline {section}{\numberline {1.1}Zielsetzung und Beschreibung der Aufgabenstellung}{11}{section.1.1}
-\contentsline {section}{\numberline {1.2}Das Unternehmen KHS}{12}{section.1.2}
-\contentsline {chapter}{\numberline {2}Apps f\"ur Smartphones}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Handykultur im heutigen Zeitalter}{13}{section.2.1}
-\contentsline {section}{\numberline {2.2}Definition App}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Funktionsumfang und Nutzen seitens der KHS}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Zielsetzung}{15}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Wirtschaftliche/Marketingtechnische Erw\"agungen}{15}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Funktionsumfang}{16}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3}Grundlagen f\"ur die folgenden Kapitel}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}MDA}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Begriffskl\"arung}{19}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Arbeitsweise}{19}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}ISO/OSI-Modell}{20}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Layer}{21}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}TCP/IP Header}{21}{subsection.3.2.2}
-\contentsline {chapter}{\numberline {4}Systemspezifikation}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Gesch\"aftsvorfall f\"ur die umzusetzende App}{22}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Vorgaben}{22}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Beschreibung des Gesch\"aftsvorfalls}{22}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Anwendung auf die Anforderungsdefinition}{22}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Erstellen eines Computation Independent Models}{23}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Vorhandene Modellierungs-/Transformationstools auf dem Markt}{24}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}OAW}{24}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Acceleo}{24}{subsubsection.4.2.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Wahl der zu benutzenden Tools}{24}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Sicherheit in mobilen Netzen}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}Sicherheitsprobleme in mobilen LANs und WANs}{25}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Bluetooth}{25}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}GSM}{26}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}GPRS}{26}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}UMTS}{27}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}HSDPA}{27}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}LTE}{27}{subsection.5.1.6}
-\contentsline {subsection}{\numberline {5.1.7}Wireless LAN}{27}{subsection.5.1.7}
-\contentsline {subsubsection}{\numberline {5.1.7.1}WEP}{27}{subsubsection.5.1.7.1}
-\contentsline {subsubsection}{\numberline {5.1.7.2}WPA}{28}{subsubsection.5.1.7.2}
-\contentsline {subsubsection}{\numberline {5.1.7.3}WPA2}{28}{subsubsection.5.1.7.3}
-\contentsline {section}{\numberline {5.2}Denkbare Angriffsformen auf Mobiltelefone in einer Firmeninfrastruktur}{28}{section.5.2}
-\contentsline {section}{\numberline {5.3}Sicherheitsmechanismen}{29}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}WLAN sichern mit Radius}{29}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}MDM}{30}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Entscheidung f\"ur \"Ubertragungstechnik}{31}{section.5.4}
-\contentsline {chapter}{\numberline {6}Mobile Betriebssysteme und Entwicklungsvoraussetzungen}{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}iOS}{33}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Architektur}{34}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}iOS Komponenten}{34}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Sicherheit}{35}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Entwicklung}{35}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Android}{36}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Architektur}{36}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Android-Komponenten}{38}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Sicherheit}{39}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Entwicklung}{39}{subsection.6.2.4}
-\contentsline {section}{\numberline {6.3}Windows Phone 7}{39}{section.6.3}
-\contentsline {section}{\numberline {6.4}Symbian}{40}{section.6.4}
-\contentsline {section}{\numberline {6.5}BlackBerry OS}{41}{section.6.5}
-\contentsline {section}{\numberline {6.6}HP webOS}{41}{section.6.6}
-\contentsline {section}{\numberline {6.7}WebApp}{42}{section.6.7}
-\contentsline {section}{\numberline {6.8}Cross-Platform Development Tools}{42}{section.6.8}
-\contentsline {chapter}{\numberline {7}Implementierung und Test}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}Wahl des Betriebssystems}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Codegenerierung}{45}{section.7.2}
-\contentsline {section}{\numberline {7.3}Tests White/Blackbox?}{45}{section.7.3}
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{46}{chapter.8}
-\contentsline {chapter}{Literaturverzeichnis}{47}{appendix*.10}
-\contentsline {chapter}{\numberline {A}Anhang}{49}{appendix.A}
-\contentsline {section}{\numberline {A.1}Jailbreak}{49}{section.A.1}
-\contentsline {section}{\numberline {A.2}Hackint0sh}{50}{section.A.2}
-\contentsline {section}{\numberline {A.3}Model-View-Controller-Prinzip}{50}{section.A.3}
+\contentsline {chapter}{\numberline {1}Systemspezifikation}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}Gesch\"aftsvorfall f\"ur die umzusetzende App}{10}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Vorgaben}{10}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Beschreibung des Gesch\"aftsvorfalls}{10}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Anwendung auf die Anforderungsdefinition}{11}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Erstellen eines Computation Independent Models}{12}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}PIM}{13}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Vorhandene Modellierungs-/Transformationstools auf dem Markt}{14}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}OAW}{14}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Acceleo}{14}{subsubsection.1.2.3.2}
+\contentsline {subsection}{\numberline {1.2.4}Wahl der zu benutzenden Tools}{14}{subsection.1.2.4}

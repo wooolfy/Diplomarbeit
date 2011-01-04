@@ -20,7 +20,7 @@
         Es soll gezeigt werden, dass mit MDA die Umsetzung des 
         GF technisch möglich ist. Ebenso sollen die Grenzen
         der Technologie erforscht werden. Dabei soll gezeigt werden, dass
-        folgende Artefakte aus dem Modell erzeugt werden können: 
+        folgende Artefakte aus dem Modell generiert werden können: 
         \begin{itemize}
           \item Persistenz
           \item Fachliche Logik
@@ -45,9 +45,16 @@
 
       	\section{Anwendung auf die Anforderungsdefinition}
       	
+      	\begin{figure}[h]%{r}{8cm}
+		      \centering	% zentrieren
+		      \includegraphics[width=0.8\textwidth]{Ersatzteilkatalog_use_case.jpg}
+		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
+		      \label{fig:usecase}
+		\end{figure}
+      	
       	Nach der Kurzbeschreibung des Anwendungsfalls folgt als nächstes die
       	Dokumentierung der Einzelheiten. Zuerst folgt eine textuelle
-      	Beschreibung, die als Grundlage zur Erstellung des CIM dienen soll. 
+      	Beschreibung, die als Grundlage zur Erstellung des CIM dient. 
       	
       	Der Prototyp ``Spare Parts Catalogue'' soll folgende Funktionen
       	unterstützen:
@@ -60,44 +67,200 @@
             \item Maschinenfehler melden
           \end{itemize}
       	
-      	
+      	\newpage
       	\subsection{Erstellen eines Computation Independent Models}
-      	
-      	\begin{figure}
+
+		Die Funktionen lassen sich im Detail wie folgt beschreiben:
+		%\begin{minipage}[!t]{0.4\textwidth}
+		%\begin{table}[b]
+	        	%\centering \leavevmode %Tabelle zentrieren
+		        %\caption{}
+		        %\label{tab:cross-platform}
+		        %\addtocounter{footnote}{+1}
+		        \newcolumntype{A}{%
+				>{\columncolor{hellgrau}}p}
+				\newcolumntype{B}{%
+				>{\columncolor{hellgrau}}p}
+				%\color{black}
+				\arrayrulecolor{white}
+				%TODO: \arrayrulewidth{3pt} irgendwie klappt das nicht... !
+		        \begin{longtable}{||A{5cm}||B{10cm}||}
+                %\centering \leavevmode
+                %\hhline{|t:==:t|}
+                \hline \hline
+                \rowcolor{dunkelgrau}
+                Funktion	 		&	Ersatzteilkatalog durchsuchen\\
+                \hline \hline
+                Kurzbeschreibung 	&	Ein Kunde möchte den Ersatzteilkatalog
+                						durchblättern bzw. durchsuchen\\
+                \hline \hline
+                Akteur 				&	Benutzer\\
+                \hline \hline
+                Vorbedingungen		&	Kundendaten bekannt\\
+                \hline \hline
+				Teilhandlungen		&	Suchbegriff eingeben\\
+                                    &   Ersatzteile blättern\\
+                                    &   Ersatzteil auswählen (Detail
+                                             ansehen)\\
+                \hline \hline
+				Nachbedingungen		&	-\\
+				%\hhline{|t:==:t|}
+				\hline \hline
+				%\end{tabular}
+				
+				%\newline
+
+		        %\begin{tabular}{||A{5cm}||B{10cm}||}
+                \hline \hline
+                \rowcolor{dunkelgrau}
+                Funktion	 		&	Ersatzteil bestellen\\
+                \hline \hline
+                Kurzbeschreibung 	&	Ein Kunde möchte ein Ersatzteil bestellen,
+                						dessen Bezeichnung und Funktion ihm bereits 
+                						bekannt ist\\ 
+                \hline \hline 
+                Akteur 				&	Benutzer\\
+                \hline \hline
+                Vorbedingungen		&	Ersatzteilkatalog
+                						durchsuchen/ Maschinenfehler melden\\ 
+                \hline \hline
+				Teilhandlungen		&	Bestellvorgang einleiten\\
+									&	Bestelldetails anzeigen\\
+                                    &   Bestellung abschicken\\
+                \hline \hline
+				Nachbedingungen		&	Bestellung wurde erfolgreich übermittelt\\
+				\hline \hline
+				%\end{tabular}
+
+		        %\begin{tabular}{||A{5cm}||B{10cm}||}
+                \hline \hline
+                \rowcolor{dunkelgrau}
+                Funktion	 		&	Bestellung stornieren\\
+                \hline \hline
+                Kurzbeschreibung 	&	Ein Kunde möchte eine bereits ausgeführte
+                						Bestellung stornieren\\ 
+                \hline \hline 
+                Akteur 				&	Benutzer\\ 
+                \hline \hline
+                Vorbedingungen		&	Ersatzteil bestellt\\ 
+                \hline \hline
+				Teilhandlungen		&	Bestelldetails anzeigen\\
+                                    &   Bestellung stornieren\\
+                \hline \hline
+				Nachbedingung bei Erfolg		&	Bestellung wurde erfolgreich storniert\\
+				\hline \hline
+				Nachbedingung bei Misserfolg	&	Bestellung konnte nicht storniert werden
+													(evtl. wurde Bestellung schon versandt) \\
+				\hline \hline
+				%\end{tabular}
+
+		        %\begin{tabular}{||A{5cm}||B{10cm}||}
+                \hline \hline
+                \rowcolor{dunkelgrau}
+                Funktion	 		&	Bestellstatus abfragen\\
+                \hline \hline
+                Kurzbeschreibung 	&	Ein Kunde möchte den Status seiner
+                Bestellung abfragen 
+                						(in Bearbeitung, versandt, nicht lieferbar, etc.)\\ 
+                \hline \hline 
+                Akteur 				&	Benutzer\\
+                \hline \hline
+                Vorbedingungen		&	Ersatzteil wurde bestellt\\ 
+                \hline \hline
+				Teilhandlungen		&	Bestelldetails anzeigen\\
+									&	Bestellstatus anzeigen\\
+                \hline \hline
+				Nachbedingungen		&	-\\
+				\hline \hline
+				%\end{tabular}
+
+		        %\begin{tabular}{||A{5cm}||B{10cm}||}
+                \hline \hline
+                \rowcolor{dunkelgrau}
+                Funktion	 		&	Maschinenfehler melden\\
+                \hline \hline
+                Kurzbeschreibung 	&	Die Fertigungsmaschine hat einen Fehler
+                festgestellt 
+                					 	und kann nicht fortfahren. Eine Systemanalyse
+                stellt fest, 
+                						dass ein Teil der Maschine kaputt ist und sendet
+                dem Benutzer eine Fehlermeldung \\ 
+                \hline \hline 
+                Akteur 				&   System\\ 
+                \hline \hline
+                Vorbedingungen 		&	Fehler im System\\
+                				 	&	Fehler kann ermittelt werden\\
+                \hline \hline
+				Teilhandlungen		&	Systemmeldung mit Fehler erstellen\\
+									&	passendes Ersatzteil ermitteln\\
+									&	Systemmeldung an Benutzer senden\\
+                \hline \hline
+				Nachbedingungen		&	Nutzer wurde über Systemfehler informiert und kann
+										Ersatzteil bestellen\\ 
+				\hline \hline
+				\end{longtable}
+		%\end{table}
+		%\end{minipage}
+
+		Als nächstes werden nun diese textuellen Beschreibungen möglichst genau in
+		Diagramme umgewandelt. Zur Erfassung dieser auf grober Detailstufe wird als
+		Darstellung das Aktivitätsdiagramm verwendet.
+		
+		\begin{figure}[h]
 		      \centering	% zentrieren
-		      \includegraphics[width=0.8\textwidth]{Ersatzteilkatalog_use_case}
-		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
-		      \label{fig:usecase}
-		\end{figure}
+		      \includegraphics[width=0.8\textwidth]{activity_durchsuchen.jpg}
+		      \caption{Aktivitätsdiagramm Ersatzteilkatalog durchsuchen}
+		      \label{fig:activity_durchsuchen}
+		\end{figure}		
 
-
-		\begin{itemize}
-            \item Ersatzteilkatalog durchsuchen / Benutzer
-            \item Ersatzteil bestellen / Benutzer
-            \item Bestellung stornieren / Benutzer
-            \item Bestellstatus abfragen / Benutzer
-            \item Maschinenfehler melden / System
-          \end{itemize}
+      	\subsection{PIM}
       	
+      	Um die nun entworfenen Funktionen weiter umzusetzen und ein Platform
+      	Independent Model zu generieren wird nun die Plattformunabhängige
+      	Basisarchitektur festgelegt.
       	
-      	\begin{itemize}
-            \item Die Transformationen erzeugen dabei aus den Elementen des
-            Quellmodells die Elemente des Zielmodells. Üblicherweise laufen
-            die Transformationen von der abstrakteren zur konkreteren Schicht
-            (CIM -> PIM -> PSM -> Code)
-            \item Ist hier wirklich eine komplette Transformation nötig? Dann
-            müssen mit OAW komplett alle Cartridges erstellt werden
-            \item Ansonsten Acceleo für Model-zu-Code Transformation; Dafür
-            muss nur 1 Template je umzusetzendes Betriebssystem geschrieben
-            werden und die Templates können aus vorhandenem Beispielcode
-            generiert werden (sehr schnelle Erstellung von Templates möglich)
-            %\item Evtl. AndroMDA (wird allerdings seit 2006 nicht mehr
-            %weiterentwickelt...)
-            \item Kommerzielle Lösungen?
-          \end{itemize}
+      	Diese lässt sich wie folgt darstellen:
+      	
+      	\begin{table}[h]
+        	\centering \leavevmode %Tabelle zentrieren
+% 	        \newcolumntype{A}{%
+% 			>{\columncolor{hellgrau}}c}
+% 			\arrayrulecolor{black}
+	      	\begin{tabular}{|c|c|}	          
+	          \hline 
+	          	\multicolumn{2}{|c|}{Präsentation / View} \\
+	          \hline 
+	          	Dialogfluss & Workflow \\
+	          \hline 
+	          	\multicolumn{2}{|c|}{Geschäftslogik/Services} \\
+	          \hline 
+	          	\multicolumn{2}{|c|}{Persistenz} \\
+	          \hline       	  
+	        \end{tabular}
+		\end{table}
+      	
+%       	\begin{itemize}
+%             \item Die Transformationen erzeugen dabei aus den Elementen des
+%             Quellmodells die Elemente des Zielmodells. Üblicherweise laufen
+%             die Transformationen von der abstrakteren zur konkreteren Schicht
+%             (CIM -> PIM -> PSM -> Code)
+%             \item Ist hier wirklich eine komplette Transformation nötig? Dann
+%             müssen mit OAW komplett alle Cartridges erstellt werden
+%             \item Ansonsten Acceleo für Model-zu-Code Transformation; Dafür
+%             muss nur 1 Template je umzusetzendes Betriebssystem geschrieben
+%             werden und die Templates können aus vorhandenem Beispielcode
+%             generiert werden (sehr schnelle Erstellung von Templates möglich)
+%             %\item Evtl. AndroMDA (wird allerdings seit 2006 nicht mehr
+%             %weiterentwickelt...)
+%           \end{itemize}
           
           
           \subsection{Vorhandene Modellierungs-/Transformationstools auf dem          Markt}
+          
+          Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
+          Software zugunsten offener Standard und frei verfügbarer
+          Open-Source Technologien. Dabei sind auch Überlegungen zu den
+          unterschiedlichen Lizenzen anzustellen.
           
           \subsubsection{OAW}
           \subsubsection{Acceleo}
