@@ -45,10 +45,21 @@
 
       	\section{Anwendung auf die Anforderungsdefinition}
       	
-      	GF1: Manuelle Nachbestellung eines Maschinenersatzteils
+      	Nach der Kurzbeschreibung des Anwendungsfalls folgt als nächstes die
+      	Dokumentierung der Einzelheiten. Zuerst folgt eine textuelle
+      	Beschreibung, die als Grundlage zur Erstellung des CIM dienen soll. 
       	
-      	GF2: Benachrichtigung eines Maschinenfehlers an den Benutzer und Dialog
-      	zum nachbestellen des Ersatzteils
+      	Der Prototyp ``Spare Parts Catalogue'' soll folgende Funktionen
+      	unterstützen:
+      	
+      	\begin{itemize}
+            \item Ersatzteilkatalog durchsuchen
+            \item Ersatzteil bestellen
+            \item Bestellung stornieren
+            \item Bestellstatus abfragen
+            \item Maschinenfehler melden
+          \end{itemize}
+      	
       	
       	\subsection{Erstellen eines Computation Independent Models}
       	
@@ -58,6 +69,15 @@
 		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
 		      \label{fig:usecase}
 		\end{figure}
+
+
+		\begin{itemize}
+            \item Ersatzteilkatalog durchsuchen / Benutzer
+            \item Ersatzteil bestellen / Benutzer
+            \item Bestellung stornieren / Benutzer
+            \item Bestellstatus abfragen / Benutzer
+            \item Maschinenfehler melden / System
+          \end{itemize}
       	
       	
       	\begin{itemize}
