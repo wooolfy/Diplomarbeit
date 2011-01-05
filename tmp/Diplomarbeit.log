@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.4)  4 JAN 2011 15:55
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.1.4)  5 JAN 2011 12:32
 entering extended mode
 **Diplomarbeit.tex
 (H:\workspace\Diplomarbeit\Diplomarbeit.tex
@@ -788,7 +788,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count181
 \LT@p@ftn=\toks31
 )
-Class scrreprt Info: longtable captions redefined on input line 42.
+Class scrreprt Info: longtable captions redefined on input line 43.
 
 ("H:\portable apps\miktex-portable\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip70
@@ -856,29 +856,39 @@ Writing index file Diplomarbeit.idx
 (H:\workspace\Diplomarbeit\titelblatt.aux)
 (H:\workspace\Diplomarbeit\vorwort.aux)
 (H:\workspace\Diplomarbeit\abkuerzungsverzeichnis.aux)
-(H:\workspace\Diplomarbeit\kapitel4.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
+(H:\workspace\Diplomarbeit\kapitel1.aux)
+(H:\workspace\Diplomarbeit\kapitel2.aux)
+(H:\workspace\Diplomarbeit\kapitel3.aux)
+(H:\workspace\Diplomarbeit\kapitel4.aux)
+(H:\workspace\Diplomarbeit\kapitel5.aux)
+(H:\workspace\Diplomarbeit\kapitel6.aux)
+(H:\workspace\Diplomarbeit\kapitel7.aux)
+(H:\workspace\Diplomarbeit\kapitel8.aux)
+(H:\workspace\Diplomarbeit\literatur.aux) (H:\workspace\Diplomarbeit\anhang.aux
+) (H:\workspace\Diplomarbeit\erklaerung.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 100.
+
 
 ("H:\portable apps\miktex-portable\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 99.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 100.
 
 ("H:\portable apps\miktex-portable\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -933,377 +943,383 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package pdfcprot Info: I didn't find lmrbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 ("H:\portable apps\miktex-portable\tex\latex\pdfcprot\pplmnT1.cpa")
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 100.
+
 
 ("H:\portable apps\miktex-portable\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package pdfcprot Info: I didn't find lmrbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 
 ("H:\portable apps\miktex-portable\tex\latex\pdfcprot\pplmnTS1.cpa")
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 100.
+
 
 ("H:\portable apps\miktex-portable\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package pdfcprot Info: I didn't find lmssbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 99.
-
+(pdfcprot)             you intended to use. on input line 100.
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 100
+.
 
 ("H:\portable apps\miktex-portable\tex\latex\lm\ts1lmss.fd"
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package pdfcprot Info: I didn't find lmssbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssbxnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssbxnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmrmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmnTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 100.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 100.
 Package pdfcprot Info: I didn't find lmssmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 100.
+
 Package pdfcprot Info: I didn't find lmssmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 100.
 Package pdfcprot Info: I didn't find lmssmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <12> not available
-(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 100.
+
 Package pdfcprot Info: I didn't find lmssmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 100.
 Package pdfcprot Info: I didn't find lmssmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 100.
+
 Package pdfcprot Info: I didn't find lmssmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmitT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <10> not available
-(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 99.
+(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 100.
+
 Package pdfcprot Info: I didn't find lmssmitTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslT1.cpa.
-(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 99.
-
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 100
+.
 Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
 Package pdfcprot Info: I didn't find lmssmslTS1.cpa.
-(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 99
-.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 10
+0.
 Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
-(pdfcprot)             you intended to use. on input line 99.
-Package hyperref Info: Link coloring ON on input line 99.
+(pdfcprot)             you intended to use. on input line 100.
+Package hyperref Info: Link coloring ON on input line 100.
 
 ("H:\portable apps\miktex-portable\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -1317,14 +1333,14 @@ Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 \c@section@level=\count189
 LaTeX Info: Redefining \Ref on input line 498.
 )
-LaTeX Info: Redefining \ref on input line 99.
-LaTeX Info: Redefining \pageref on input line 99.
-LaTeX Info: Redefining \nameref on input line 99.
+LaTeX Info: Redefining \ref on input line 100.
+LaTeX Info: Redefining \pageref on input line 100.
+LaTeX Info: Redefining \nameref on input line 100.
 
 (H:\workspace\Diplomarbeit\Diplomarbeit.out)
 (H:\workspace\Diplomarbeit\Diplomarbeit.out)
 \@outlinefile=\write4
-LaTeX Info: Redefining \Ref on input line 99.
+LaTeX Info: Redefining \Ref on input line 100.
 
 
 Package scrbase Warning: \ifpdftex was redefined
@@ -1358,7 +1374,7 @@ onverted-to.pdf images/fh_logo_schmal.eps>
 (epstopdf)             \includegraphics on input line 4.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/fh_logo_schmal-eps-converted-to.pdf, id=36, 525.965pt x 63.23625pt>
+<images/fh_logo_schmal-eps-converted-to.pdf, id=172, 525.965pt x 63.23625pt>
 File: images/fh_logo_schmal-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/fh_logo_schmal-eps-converted-to.pdf>
@@ -1425,20 +1441,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 3.
-)
-\tf@toc=\write5
  [5
 
 
-]
+])
+\tf@toc=\write5
+ [6]
 (H:\workspace\Diplomarbeit\Diplomarbeit.lof)
 \tf@lof=\write6
- [6
+ [7
 
 ]
 (H:\workspace\Diplomarbeit\Diplomarbeit.lot)
 \tf@lot=\write7
- [7
+ [8
 
 ]
 (H:\workspace\Diplomarbeit\abkuerzungsverzeichnis.tex
@@ -1446,10 +1462,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--39
 
  []
 
-[8
+[9
 
 
-]) [9] (H:\workspace\Diplomarbeit\kapitel4.tex
+]) [10] (H:\workspace\Diplomarbeit\kapitel1.tex
 Kapitel 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1458,76 +1474,257 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Support for \float@addtolists may be removed from
 (scrreprt)              `scrreprt' soon .
 
-<images/Ersatzteilkatalog_use_case.jpg, id=93, 397.0032pt x 346.896pt>
-File: images/Ersatzteilkatalog_use_case.jpg Graphic file (type jpg)
-
-<use images/Ersatzteilkatalog_use_case.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10
+[11
 
 
 
-] [11 <H:/workspace/Diplomarbeit/images/Ersatzteilkatalog_use_case.jpg>]
-Overfull \hbox (3.94719pt too wide) in alignment at lines 87--146
- [] [] 
- []
+]) [12] (H:\workspace\Diplomarbeit\kapitel2.tex
+Kapitel 2.
+[13
 
 
-Underfull \vbox (badness 10000) detected at line 146
- []
+
+] <images/handy1.jpg, id=308, 501.875pt x 376.40625pt>
+File: images/handy1.jpg Graphic file (type jpg)
+
+<use images/handy1.jpg> <images/handy2.jpg, id=309, 608.2725pt x 410.53375pt>
+File: images/handy2.jpg Graphic file (type jpg)
+
+<use images/handy2.jpg> <images/handy3.jpg, id=311, 220.825pt x 160.6pt>
+File: images/handy3.jpg Graphic file (type jpg)
+
+<use images/handy3.jpg> [14 <H:/workspace/Diplomarbeit/images/handy1.jpg> <H:/w
+orkspace/Diplomarbeit/images/handy2.jpg> <H:/workspace/Diplomarbeit/images/hand
+y3.jpg>] [15] [16] [17]) [18] (H:\workspace\Diplomarbeit\kapitel3.tex
+Kapitel 3.
+[19
 
 
-Overfull \hbox (3.94719pt too wide) in alignment at lines 146--200
- [] [] 
- []
-
-
-Overfull \hbox (3.94719pt too wide) in alignment at lines 200--201
- [] [] 
- []
-
-[12] <images/activity_durchsuchen.jpg, id=110, 549.252pt x 317.0244pt>
-File: images/activity_durchsuchen.jpg Graphic file (type jpg)
-
-<use images/activity_durchsuchen.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13 <H:/workspace/Diplomarbeit/images/activity_durchsuchen.jpg>]) [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
- [15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 75.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 75.
+ [20]) [21] (H:\workspace\Diplomarbeit\kapitel4.tex
+Kapitel 4.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
+("H:\portable apps\miktex-portable\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [22
 
-(H:\workspace\Diplomarbeit\Diplomarbeit.aux
+
+
+]
+<images/Ersatzteilkatalog_use_case.pdf, id=364, 845.1575pt x 597.23125pt>
+File: images/Ersatzteilkatalog_use_case.pdf Graphic file (type pdf)
+
+<use images/Ersatzteilkatalog_use_case.pdf>
+Overfull \hbox (3.94719pt too wide) in alignment at lines 101--160
+ [] [] 
+ []
+
+[23 <H:/workspace/Diplomarbeit/images/Ersatzteilkatalog_use_case.pdf, page is r
+otated 90 degrees>]
+Underfull \vbox (badness 10000) detected at line 160
+ []
+
+
+Overfull \hbox (3.94719pt too wide) in alignment at lines 160--214
+ [] [] 
+ []
+
+
+Overfull \hbox (3.94719pt too wide) in alignment at lines 214--215
+ [] [] 
+ []
+
+[24] <images/activity_durchsuchen.pdf, id=377, 597.23125pt x 421.575pt>
+File: images/activity_durchsuchen.pdf Graphic file (type pdf)
+
+<use images/activity_durchsuchen.pdf> [25 <H:/workspace/Diplomarbeit/images/act
+ivity_durchsuchen.pdf, page is rotated 90 degrees>]
+<images/profile_pageflow.pdf, id=386, 845.1575pt x 597.23125pt>
+File: images/profile_pageflow.pdf Graphic file (type pdf)
+
+<use images/profile_pageflow.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/profile_view.pdf, id=387, 845.1575pt x 597.23125pt>
+File: images/profile_view.pdf Graphic file (type pdf)
+
+<use images/profile_view.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26]) [27 <H:/workspace/Diplomarbeit/images/profile_pageflow.pdf, page is rotat
+ed 90 degrees>] [28 <H:/workspace/Diplomarbeit/images/profile_view.pdf, page is
+ rotated 90 degrees>] (H:\workspace\Diplomarbeit\kapitel5.tex
+Kapitel 5.
+[29
+
+
+
+] [30] [31] [32] [33]
+<images/microsoft_security_trends.jpg, id=448, 704.6325pt x 421.575pt>
+File: images/microsoft_security_trends.jpg Graphic file (type jpg)
+
+<use images/microsoft_security_trends.jpg> [34 <H:/workspace/Diplomarbeit/image
+s/microsoft_security_trends.jpg>]) [35] [36]
+(H:\workspace\Diplomarbeit\kapitel6.tex
+Kapitel 6.
+<images/MA_smartphones.jpg, id=464, 120.45pt x 72.27pt>
+File: images/MA_smartphones.jpg Graphic file (type jpg)
+
+<use images/MA_smartphones.jpg> [37
+
+
+
+ <H:/workspace/Diplomarbeit/images/MA_smartphones.jpg>] [38] [39] [40]
+<images/android_systemarchitektur.jpg, id=492, 536.75531pt x 385.44pt>
+File: images/android_systemarchitektur.jpg Graphic file (type jpg)
+
+<use images/android_systemarchitektur.jpg> [41 <H:/workspace/Diplomarbeit/image
+s/android_systemarchitektur.jpg>] [42] [43] [44] [45] [46] [47]
+Overfull \hbox (9.01053pt too wide) in paragraph at lines 551--585
+ [] 
+ []
+
+) [48] (H:\workspace\Diplomarbeit\kapitel7.tex
+Kapitel 7.
+) [49
+
+
+
+] (H:\workspace\Diplomarbeit\kapitel8.tex
+Kapitel 8.
+) [50
+
+
+
+] (H:\workspace\Diplomarbeit\literatur.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+[][]\T1/lmr/m/n/12 [KHS10] o.V.: Un-ter-neh-men, In: KHS GmbH, Stand: 2010, URL
+:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+[][]\T1/lmr/m/n/12 [Apple10] o.V.: Ap-p-le Spe-ci-al Event, Stand: 20. Ok-to-be
+r 2010, URL:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+[][]\T1/lmr/m/n/12 [Heise10] o.V.: Hei-se On-li-ne, Stand: 20.10.2010, URL:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+\T1/lmr/m/n/12 http://www.heise.de/newsticker/meldung/Windows-Phone-7-startet-b
+ei-T-Mobile-
+ []
+
+[51
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+[][]\T1/lmr/m/n/12 [ANDEV10] o.V.: An-dro-id De-vel-opers, Stand: 02.11.2010, U
+RL:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+[][]\T1/lmr/m/n/12 [Symbian10] o.V.: Sym-bi-an Foun-da-ti-on, Stand: 28.11.2010
+, URL:
+ []
+
+
+Overfull \hbox (9.93192pt too wide) in paragraph at lines 65--67
+\T1/lmr/m/n/12 http://developer.symbian.org/wiki/Symbian_Foundation_web_sites_t
+o_shut_down 
+ []
+
+) [52] (H:\workspace\Diplomarbeit\anhang.tex
+Anhang A.
+[53
+
+
+
+]) [54] (H:\workspace\Diplomarbeit\erklaerung.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+) [55
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+ [56
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
+ (H:\workspace\Diplomarbeit\Diplomarbeit.aux
 (H:\workspace\Diplomarbeit\titelblatt.aux)
 (H:\workspace\Diplomarbeit\vorwort.aux)
 (H:\workspace\Diplomarbeit\abkuerzungsverzeichnis.aux)
-(H:\workspace\Diplomarbeit\kapitel4.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
+(H:\workspace\Diplomarbeit\kapitel1.aux)
+(H:\workspace\Diplomarbeit\kapitel2.aux)
+(H:\workspace\Diplomarbeit\kapitel3.aux)
+(H:\workspace\Diplomarbeit\kapitel4.aux)
+(H:\workspace\Diplomarbeit\kapitel5.aux)
+(H:\workspace\Diplomarbeit\kapitel6.aux)
+(H:\workspace\Diplomarbeit\kapitel7.aux)
+(H:\workspace\Diplomarbeit\kapitel8.aux)
+(H:\workspace\Diplomarbeit\literatur.aux) (H:\workspace\Diplomarbeit\anhang.aux
+) (H:\workspace\Diplomarbeit\erklaerung.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 7FC7F887268C96831BB8F08378315627;442.
+(rerunfilecheck)             Checksum: F36A3E333DF8D643CE16BBA2F828F513;2891.
  ) 
 Here is how much of TeX's memory you used:
- 13658 strings out of 494019
- 202881 string characters out of 3144346
+ 14091 strings out of 494019
+ 210449 string characters out of 3144346
  411805 words of memory out of 3000000
- 16516 multiletter control sequences out of 15000+200000
- 125771 words of font info for 87 fonts, out of 3000000 for 9000
+ 16711 multiletter control sequences out of 15000+200000
+ 139254 words of font info for 96 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 51i,11n,90p,569b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
-{H:/portable apps/miktex-portable/fonts/enc/dvips/lm/lm-ts1.enc}{H:/portable 
-apps/miktex-portable/fonts/enc/dvips/lm/lm-ec.enc}<H:/portable apps/miktex-port
-able/fonts/type1/public/lm/lmbx12.pfb><H:/portable apps/miktex-portable/fonts/t
-ype1/public/lm/lmr12.pfb><H:/portable apps/miktex-portable/fonts/type1/public/l
-m/lmr17.pfb><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmssbx10.pf
-b>
-Output written on Diplomarbeit.pdf (15 pages, 405255 bytes).
+ 51i,12n,90p,569b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+{H:/portable apps/miktex-portable/fonts/enc/dvips/lm/lm-mathsy.enc}{H:/portab
+le apps/miktex-portable/fonts/enc/dvips/lm/lm-mathit.enc}{H:/portable apps/mikt
+ex-portable/fonts/enc/dvips/lm/lm-ec.enc}{H:/portable apps/miktex-portable/font
+s/enc/dvips/lm/lm-ts1.enc}<H:/portable apps/miktex-portable/fonts/type1/public/
+lm/lmbx12.pfb><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmmi12.pf
+b><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmmi8.pfb><H:/portabl
+e apps/miktex-portable/fonts/type1/public/lm/lmr10.pfb><H:/portable apps/miktex
+-portable/fonts/type1/public/lm/lmr12.pfb><H:/portable apps/miktex-portable/fon
+ts/type1/public/lm/lmr17.pfb><H:/portable apps/miktex-portable/fonts/type1/publ
+ic/lm/lmr7.pfb><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmr8.pfb
+><H:/portable apps/miktex-portable/fonts/type1/public/lm/lmssbx10.pfb><H:/porta
+ble apps/miktex-portable/fonts/type1/public/lm/lmsy10.pfb><H:/portable apps/mik
+tex-portable/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Diplomarbeit.pdf (56 pages, 686143 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 18504 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 187 named destinations out of 1000 (max. 500000)
+ 18816 words of extra memory for PDF output out of 20736 (max. 10000000)
 

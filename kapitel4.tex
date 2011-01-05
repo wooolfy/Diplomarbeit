@@ -10,6 +10,20 @@
 %         \end{itemize}
       	%\section{Model Driven Architecture}
       	
+      	Das folgende Kapitel beschäftigt sich mit der Systemspezifikation für
+      	die zu entwicklende Smartphone App. Dabei wird ein Konzept erstellt,
+      	dass als Grundlage für den modellgetriebenen Ansatz dienen soll. 
+      	
+      	Da wir uns jetzt bei der konkreten Umsetzung der Software befinden ist
+      	es an der Zeit dem Projekt einen Namen zu geben. %Formulierung
+      	
+      	\begin{quote}
+        	\texttt{YASA - Yet Another Smartphone Applicaction}  
+        \end{quote}
+
+		Nachfolgend im Text wird mit YASA bezug auf den Prototypen genommen.
+		%Formulierung
+      	
 
 		\section{Geschäftsvorfall für die umzusetzende App}    
         Ein realistischer Geschäftsvorfall (kurz GF) soll als Grundlage für die
@@ -47,7 +61,7 @@
       	
       	\begin{figure}[h]%{r}{8cm}
 		      \centering	% zentrieren
-		      \includegraphics[width=0.8\textwidth]{Ersatzteilkatalog_use_case.jpg}
+		      \includegraphics[width=1\textwidth]{Ersatzteilkatalog_use_case}
 		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
 		      \label{fig:usecase}
 		\end{figure}
@@ -67,10 +81,10 @@
             \item Maschinenfehler melden
           \end{itemize}
       	
-      	\newpage
+
       	\subsection{Erstellen eines Computation Independent Models}
 
-		Die Funktionen lassen sich im Detail wie folgt beschreiben:
+		Die Funktionen von YASA lassen sich im Detail wie folgt beschreiben:
 		%\begin{minipage}[!t]{0.4\textwidth}
 		%\begin{table}[b]
 	        	%\centering \leavevmode %Tabelle zentrieren
@@ -142,7 +156,7 @@
                 \hline \hline 
                 Akteur 				&	Benutzer\\ 
                 \hline \hline
-                Vorbedingungen		&	Ersatzteil bestellt\\ 
+                Vorbedingungen		&	Ersatzteil wurde bestellt\\ 
                 \hline \hline
 				Teilhandlungen		&	Bestelldetails anzeigen\\
                                     &   Bestellung stornieren\\
@@ -208,14 +222,14 @@
 		
 		\begin{figure}[h]
 		      \centering	% zentrieren
-		      \includegraphics[width=0.8\textwidth]{activity_durchsuchen.jpg}
+		      \includegraphics[width=1\textwidth]{activity_durchsuchen}
 		      \caption{Aktivitätsdiagramm Ersatzteilkatalog durchsuchen}
 		      \label{fig:activity_durchsuchen}
 		\end{figure}		
 
       	\subsection{PIM}
       	
-      	Um die nun entworfenen Funktionen weiter umzusetzen und ein Platform
+      	Um die entworfenen Funktionen weiter umzusetzen und ein Platform
       	Independent Model zu generieren wird nun die Plattformunabhängige
       	Basisarchitektur festgelegt.
       	
@@ -223,23 +237,95 @@
       	
       	\begin{table}[h]
         	\centering \leavevmode %Tabelle zentrieren
+        	\caption{Architektur von YASA-Anwendungen}
+		    \label{tab:yasa-architecture}
 % 	        \newcolumntype{A}{%
 % 			>{\columncolor{hellgrau}}c}
  			\arrayrulecolor{black}
-	      	\begin{tabular}{|c|c|}	          
-	          \hline 
-	          	\multicolumn{2}{|c|}{Präsentation / View} \\
-	          \hline 
-	          	Dialogfluss & Workflow \\
-	          \hline 
-	          	\multicolumn{2}{|c|}{Geschäftslogik/Services} \\
-	          \hline 
-	          	\multicolumn{2}{|c|}{Persistenz} \\
-	          \hline       	  
+	      	\begin{tabular}{||c||}	          
+	          \hline \hline  
+	          	Präsentation / View \\
+	          \hline  \hline
+	          	Dialogfluss \\
+	          \hline  \hline
+	          	Geschäftslogik/Services \\
+	          \hline  \hline
+	          	Persistenz \\
+	          \hline  \hline   	  
 	        \end{tabular}
 		\end{table}
-      	
-%       	\begin{itemize}
+
+		Als oberste Schicht im Diagramm \ref{tab:yasa-architecture} finden wir die
+		Präsentationsschicht. Diese ist zuständig für die Darstellung des Inhalts auf
+		dem jeweiligen Smartphone in einer für den Benutzer verständliche Art und
+		Weise. Darunter befindet sich der Dialogfluss. Hier werden Kontrollflüsse der
+		Anwendung definiert. Es folgt die Geschäftslogik des Systems, die in Form von
+		Services zur Verfügung gestellt werden. Sollen Daten im Rahmen der
+		Geschäftslogik dauerhaft gespeichert und abrufbar sein, kümmert sich die
+		Persistenzschicht darum. 
+		
+		Die festgelegten Schichten können durch folgende UML-Profile modelliert
+		werden:
+
+		\begin{itemize}
+          \item Präsentation (View): Metamodell zur Modellierung der auf dem
+          Smartphone darzustellenden Oberfläche in Form von Dialogmasken.
+          Interaktionsmöglichkeiten des Nutzers mit der Oberfläche und den
+          enthaltenen Schaltflächen wird hier festgelegt.
+          \item Dialogfluss (Pageflow Profile): Profil zur Modellierung von
+          verzweigten Dialogflüssen
+          \item Persistenz (Persistence Profile): Modellierung des persistenten
+          Charakters von Entitätsklassen
+        \end{itemize}
+        
+        
+        \subsubsection{Modellierung PIM}
+        
+        \begin{figure}[h]
+		      \centering	% zentrieren
+		      \includegraphics[width=1\textwidth]{profile_pageflow}
+		      \caption{Definition von Pageflow Profile}
+		      \label{fig:profile_pageflow}
+		\end{figure}	
+
+		\begin{figure}[h]
+		      \centering	% zentrieren
+		      \includegraphics[width=1\textwidth]{profile_view}
+		      \caption{Definition des Metamodells View}
+		      \label{fig:profile_view}
+		\end{figure}	
+        
+        Als Basisdiagramm soll uns das Aktivitätsdiagramm dienen, welches durch
+        weitere Elemente erweitert wurde. Zum einen wäre dies das Metamodell
+        View, das die Konstrukte zur Modellierung der Dialogmasken enthält
+        (siehe Abbildung \ref{fig:profile_pageflow}). Zum anderen...
+        
+        Als nächstes zu definieren ist das View Metamodell. Hier wird
+        festgelegt, welche Elemente zur Dartellung verwendet werden und wie der
+        Benutzer die dartestellten Elemente manipulieren darf
+        (Abbildung \ref{fig:profile_view}).
+        
+        Basiselement ist der \texttt{View}. Ihm werden beliebig viele
+        View-Elemente zugeordnet. Weiterhin im Modell enthalten sind
+        \texttt{OutputElemente} für die übergebenden Modelldaten in grafischer
+        Form und den \texttt{InputElementen}, die Werte des Pageflow-Kontextes
+        durch Benutzereingaben aktualisieren. Daneben gibt es
+        \texttt{CommandElemente}, an die ein \texttt{Outcome} gehängt werden
+        kann(Kontrollflusssteuerung). Die Mitgeschickten Nutzdaten werden durch
+        ein Element des Typs \texttt{ContextContainer} angehangen.
+          
+          
+          \subsection{Vorhandene Modellierungs-/Transformationstools auf dem          Markt}
+          
+          
+      
+          Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
+          Software zugunsten offener Standard und frei verfügbarer
+          Open-Source Technologien. Dabei sind auch Überlegungen zu den
+          unterschiedlichen Lizenzen anzustellen.
+          
+          
+%           \begin{itemize}
 %             \item Die Transformationen erzeugen dabei aus den Elementen des
 %             Quellmodells die Elemente des Zielmodells. Üblicherweise laufen
 %             die Transformationen von der abstrakteren zur konkreteren Schicht
@@ -254,13 +340,6 @@
 %             %weiterentwickelt...)
 %           \end{itemize}
           
-          
-          \subsection{Vorhandene Modellierungs-/Transformationstools auf dem          Markt}
-          
-          Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
-          Software zugunsten offener Standard und frei verfügbarer
-          Open-Source Technologien. Dabei sind auch Überlegungen zu den
-          unterschiedlichen Lizenzen anzustellen.
           
           \subsubsection{OAW}
           \subsubsection{Acceleo}

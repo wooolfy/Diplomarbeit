@@ -36,6 +36,7 @@
 %\usepackage{pdfpages} komische fehlermeldung?!?
 \usepackage[activate=normal]{pdfcprot}			% optischer Randausgleich
 \usepackage{graphicx} 							% EPS grafiken
+\usepackage{graphics}
 \usepackage{epstopdf}							% eps grafiken in pdftex erlaubt
 \usepackage{hyperref}
 \usepackage{longtable}
@@ -123,31 +124,31 @@
 \include{abkuerzungsverzeichnis}
 
 
-%\include{kapitel1}
+\include{kapitel1}
 
-%\include{kapitel2}
+\include{kapitel2}
 
-%\include{kapitel3}
+\include{kapitel3}
 
 \include{kapitel4}
 
-%\include{kapitel5}
+\include{kapitel5}
 
-%\include{kapitel6}
+\include{kapitel6}
 
-%\include{kapitel7}
+\include{kapitel7}
 %Zukunftsausblick und Zusammenfassung der Arbeit
-%\include{kapitel8}
+\include{kapitel8}
 %ANHANG TODO: BUCHSTABEN statt Zahlen... aber wie??
-%\begin{appendix}
+\begin{appendix}
 %Literaturverzeichnis
-%\include{literatur}
+\include{literatur}
 %Anhang (Quellcode...)
-%\include{anhang}
+\include{anhang}
 %Erklärung, dass man alles selbst verfasst hat und alle Quellen offen gelegt
 % wurden
-%\include{erklaerung}
-%\end{appendix}
+\include{erklaerung}
+\end{appendix}
 %Leere Seite am Ende
 \newpage\thispagestyle{empty}~
 
