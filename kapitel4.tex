@@ -300,31 +300,60 @@
         View, das die Konstrukte zur Modellierung der Dialogmasken enthält
         (siehe Abbildung \ref{fig:profile_pageflow}). Zum anderen...
         
-        Als nächstes zu definieren ist das View Metamodell. Hier wird
-        festgelegt, welche Elemente zur Dartellung verwendet werden und wie der
-        Benutzer die dartestellten Elemente manipulieren darf
-        (Abbildung \ref{fig:profile_view}).
-        
-        Basiselement ist der \texttt{View}. Ihm werden beliebig viele
-        View-Elemente zugeordnet. Weiterhin im Modell enthalten sind
-        \texttt{OutputElemente} für die übergebenden Modelldaten in grafischer
-        Form und den \texttt{InputElementen}, die Werte des Pageflow-Kontextes
-        durch Benutzereingaben aktualisieren. Daneben gibt es
+        Als nächstes zu definieren ist das View Metamodell. Hier wird festgelegt,
+        welche Elemente zur Dartellung verwendet werden und wie der Benutzer die
+        dargestellten Elemente manipulieren darf (Abbildung
+        \ref{fig:profile_view}). Basiselement ist der \texttt{View}. Ihm werden
+        beliebig viele View-Elemente zugeordnet. Weiterhin im Modell enthalten
+        sind \texttt{OutputElemente} für die übergebenden Modelldaten in
+        grafischer Form und den \texttt{InputElementen}, die Werte des
+        Pageflow-Kontextes durch Benutzereingaben aktualisieren. Daneben gibt es
         \texttt{CommandElemente}, an die ein \texttt{Outcome} gehängt werden
         kann(Kontrollflusssteuerung). Die Mitgeschickten Nutzdaten werden durch
         ein Element des Typs \texttt{ContextContainer} angehangen.
+        
+        
+        Nach der Definition der verschiedenen Modelle lassen sich diese auf
+        unsere Spezifikation anwenden. Im konkreten Fall ``Ersatzteilkatalog
+        durchsuchen'' können wir den in Abbildung
+        \ref{fig:ad_Ersatzteilkatalog_durchsuchen} dargestellten Dialogfluss
+        generieren.
+        
+        \begin{figure}[h]
+		      \centering	% zentrieren
+		      \includegraphics[width=1\textwidth]{ad_Ersatzteilkatalog_durchsuchen}
+		      \caption{Dialogfluss ``Ersatzteilkatalog durchsuchen''}
+		      \label{fig:ad_Ersatzteilkatalog_durchsuchen}
+		\end{figure}	
+
+		Bla fluss erklären...
+		
+		%TODO: Skizze im Anhang einfügen?
+		Zur Beschreibung des Dialogflusses gehören ausserdem weitere Details, um die
+		gestellten Anforderungen vollständig abzubilden. (evtl. Verweis
+		Entwurfsskizze). So muss jeder von einem \texttt{ViewCall} aufgerufene
+		\texttt{View} weiter detailliert und mit dem entsprechenden Datenmodell
+		verbunden werden (Abbildung \ref{fig:view_Ersatzteilkatalog_durchsuchen}).
+        
+        
+        \begin{figure}[h]
+		      \centering	% zentrieren
+		      \includegraphics[width=1\textwidth]{view_Ersatzteilkatalog_durchsuchen}
+		      \caption{Anwendung des View-Metamodells}
+		      \label{fig:view_Ersatzteilkatalog_durchsuchen}
+		\end{figure}	
           
-          
-          \subsection{Vorhandene Modellierungs-/Transformationstools auf dem          Markt}
+      
+      \subsection{Vorhandene Modellierungs-/Transformationstools auf dem      Markt}
           
           
       
-          Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
-          Software zugunsten offener Standard und frei verfügbarer
-          Open-Source Technologien. Dabei sind auch Überlegungen zu den
-          unterschiedlichen Lizenzen anzustellen.
-          
-          
+      Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
+      Software zugunsten offener Standard und frei verfügbarer
+      Open-Source Technologien. Dabei sind auch Überlegungen zu den
+      unterschiedlichen Lizenzen anzustellen.
+      
+      
 %           \begin{itemize}
 %             \item Die Transformationen erzeugen dabei aus den Elementen des
 %             Quellmodells die Elemente des Zielmodells. Üblicherweise laufen
@@ -339,12 +368,12 @@
 %             %\item Evtl. AndroMDA (wird allerdings seit 2006 nicht mehr
 %             %weiterentwickelt...)
 %           \end{itemize}
-          
-          
-          \subsubsection{OAW}
-          \subsubsection{Acceleo}
-          \subsection{Wahl der zu benutzenden Tools}
-          
-          Visual Paradigm
-          
-          
+      
+      
+      \subsubsection{OAW}
+      \subsubsection{Acceleo}
+      \subsection{Wahl der zu benutzenden Tools}
+      
+      Visual Paradigm
+      
+      
