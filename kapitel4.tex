@@ -59,13 +59,6 @@
 
       	\section{Anwendung auf die Anforderungsdefinition}
       	
-      	\begin{figure}[h]%{r}{8cm}
-		      \centering	% zentrieren
-		      \includegraphics[width=1\textwidth]{Ersatzteilkatalog_use_case}
-		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
-		      \label{fig:usecase}
-		\end{figure}
-      	
       	Nach der Kurzbeschreibung des Anwendungsfalls folgt als nächstes die
       	Dokumentierung der Einzelheiten. Zuerst folgt eine textuelle
       	Beschreibung, die als Grundlage zur Erstellung des CIM dient. 
@@ -81,6 +74,16 @@
             \item Maschinenfehler melden
           \end{itemize}
       	
+      	Anhand dieser Beschreibung kann ein Use-Case-Diagramm erstellt werden
+      	mit den unterstützten Funktionen seitens des Nutzers und des Systems
+      	(Abbildung \ref{fig:usecase}).
+      	
+      	\begin{figure}[h]%{r}{8cm}
+		      \centering	% zentrieren
+		      \includegraphics[width=1\textwidth]{Ersatzteilkatalog_use_case}
+		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
+		      \label{fig:usecase}
+		\end{figure}
 
       	\subsection{Erstellen eines Computation Independent Models}
 
@@ -375,5 +378,26 @@
       \subsection{Wahl der zu benutzenden Tools}
       
       Visual Paradigm
+      
+      Visual Paradigm ist sehr leicht und intuitiv zu erlernen. Die meisten
+      Funktionen findet man auf anhieb, ohne auch nur einen Blick in die
+      Dokumentation werfen zu müssen. Allerdings macht das arbeiten mit Visual
+      Paradigm in Kombination mit Accelo als Transformationstool nicht viel
+      Sinn, da beim Export der Diagramme in XML Files Informationen verloren
+      gehen. Beim Import in Acceleo beispielsweise fehlen die Namen bzw.
+      Bezeichnungen der Diagramme so wie Zusammenhänge der einzelnen
+      Diagrammarten, die jedoch vorher definiert wurden. Damit ist Visual
+      Paradigm für den Zweck der Codegenerierung in Acceleo unbrauchbar.
+
+      MagicDraw
+
+      Ein erster Versuch ein einfaches Klassendiagramm zu implementieren und in
+      Code umzuwandeln klappte erstaunlicherweise recht gut. Allerdings ist die
+      Bedienung von MagicDraw wesentlich komplexer und unübersichtlicher als bei
+      Visual Paradigm. Die Einarbeitungszeit ist bei dieser Komplexität
+      exponentiell größer. Daher verzögerte sich die Erstellung der Diagramme
+      sehr. Was in Visual Paradigm in Stunden machbar war, dauerte hier Tage.
+      Schlechte Navigation, unübersichtliche Menüs und wenig Dokumentation zur
+      Software, aber dafür volle Kompatibilität zu Acceleo.
       
       
