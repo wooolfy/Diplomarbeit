@@ -106,14 +106,20 @@
 			\subsection{UMTS}
 			
 			UMTS stellt eine Erweiterung auf Basis der verbreiteten Technik dar. Damit
-			gewährleistet ist die Abwärtskompatibilität zu GPRS/GSM. 
+			gewährleistet ist die Abwärtskompatibilität zu GPRS/GSM. Prizipiell ist diese
+			Technologie anfällig für Denial-of-Service- und Impersonationsattacken. Unter
+			Impersationsattacken versteht man die verwendung eines kompromittierten
+			Authentisierungsvektors, um sich unter der Identität des wahren Teilnehmers
+			an das Netz anzumelden.
 			
 			%TODO: hier weiterschreiben!!!
 			
 			\subsection{HSDPA}
 			
+			fehlende info... buch zu alt. evtl. auf quelle im internet verweisen.
+			
 			\subsection{LTE}
-			Neue Technik!!! noch nicht in Deutschland verfügbar
+			Neue Technik!!! noch nicht in Deutschland verfügbar...
 			
 			\subsection{Wireless LAN}
 			
@@ -291,51 +297,69 @@
     			Kosten anfallen (``Logging \& Accounting'')
             \end{itemize}
 
-			MDM-Lösungen müssen dabei den gesamten Lebenszyklus eines Smartphones
-			begleiten. Zu Beginn
-			bekommen die Geräte eine Identität zugewiesen, die mit den entsprechenden
-			Zugangsberechtigungen und Funktionseinschränkungen verknüpft ist. Im Idealfall
-			bekommt der Nutzer für sein Smartphone nur noch ein Passwort, mit dem er sich
-			einmalig für die Erstkonfiguration anmelden kann. Während der normalen Nutzung
-			im Alltag können die Firmen-Administratoren mittels MDM dann zentral
-			Software-Updates verteilen, Geräte sperren oder durch Konfigurationsänderungen
-			schnell auf Sicherheitslücken reagieren. Wird das Smartphone schließlich
-			ausgemustert oder verlässt der Nutzer das Unternehmen, werden mittels MDM
-			Berechtigungen gelöscht, Unternehmensdaten getilgt oder die Konfiguration auf
-			ein neues Endgerät übertragen.
-			
+			Bei den MDM-Lösungen bekommen die Geräte eine Identität zugewiesen, die mit den
+			entsprechenden Zugangsberechtigungen und Funktionseinschränkungen verknüpft ist.
+			Im Idealfall bekommt der Nutzer für sein Smartphone nur noch ein Passwort, mit
+			dem er sich einmalig für die Erstkonfiguration anmelden kann. Während der
+			normalen Nutzung im Alltag können die Firmen-Administratoren mittels MDM dann
+			zentral Software-Updates verteilen, Geräte sperren oder durch
+			Konfigurationsänderungen schnell auf Sicherheitslücken reagieren. Wird das
+			Smartphone schließlich ausgemustert oder verlässt der Nutzer das Unternehmen,
+			werden mittels MDM Berechtigungen gelöscht, Unternehmensdaten getilgt oder die
+			Konfiguration auf ein neues Endgerät übertragen.
+									
 			Der Markt für MDM-Lösungen ist derzeit noch übersichtlich. Statistiken über
 			Marktanteile existieren nicht. Zu den großen drei, die immer wieder genannt
 			werden, gehören jedoch die US-Unternehmen Mobile Iron, Good Technology und
 			Sybase. Ihre Produkte unterscheiden sich dabei vor allem im Detail - während
-			Good Technology großes Know-how in Sales-Umgebungen verspricht, streicht man
-			bei Mobile Iron die Handhabbarkeit unterschiedlicher Smartphone-Plattformen
-			heraus. Sybase wirbt wiederum mit einer guten Anbindung an die hausinterne IT.
-			Zumeist bezahlen Unternehmen einen Sockelbetrag plus eine Lizenzgebühr pro
-			Nutzer. Mit insgesamt einigen Tausend Euro pro Jahr müssen die Firmen dabei
-			rechnen. Anbieter wie Mobile Iron haben für Neukunden aber auch Lockofferten
-			von nur vier Dollar pro Nutzer und Monat (plus Sockelbetrag) im Angebot.
-			
+			Good Technology großes Know-how in Sales-Umgebungen verspricht, streicht man bei
+			Mobile Iron die Handhabbarkeit unterschiedlicher Smartphone-Plattformen heraus.
+			Sybase wirbt wiederum mit einer guten Anbindung an die hausinterne IT. Zumeist
+			bezahlen Unternehmen einen Sockelbetrag plus eine Lizenzgebühr pro Nutzer. Mit
+			insgesamt einigen Tausend Euro pro Jahr müssen die Firmen dabei rechnen.
+			Anbieter wie Mobile Iron haben für Neukunden aber auch Lockofferten von nur vier
+			Dollar pro Nutzer und Monat (plus Sockelbetrag) im Angebot.
+									
 			Was die Sache noch komplizierter macht: In vielen Firmen werden längst nicht
-			mehr nur reine Businessgeräte wie die Blackberrys des kanadischen Anbieters
-			RIM eingesetzt. Apples iPhone beispielsweise hat mittlerweile ebenfalls einen
+			mehr nur reine Businessgeräte wie die Blackberrys des kanadischen Anbieters RIM
+			eingesetzt. Apples iPhone beispielsweise hat mittlerweile ebenfalls einen
 			Siegeszug in Unternehmen angetreten. Der traditionsreiche IT-Dienstleister
 			Unisys etwa, der für Firmen und Regierungen auf der ganzen Welt arbeitet,
 			benutzt iPhones, um Server zu überwachen, aber auch für höchst
 			sicherheitskritische Anwendungen wie die Steuerung von Systemen zur
 			Kameraüberwachung.
-			
+									
 			Ein weiterer kritischer Punkt sind private Anwendungen auf Firmen-Smartphones.
 			Geräte wie das iPhone laden geradezu dazu ein, neben geschäftlichen Apps auch
-			Spiele zu installieren oder Multimedia-Content zu konsumieren. Schließen
-			lässt sich dieses Sicherheitsloch derzeit nur, indem Firmen das Aufspielen			privater Inhalte ganz verbieten.
-			%TODO: überarbeiten/umschreiben... evtl. streichen
+			Spiele zu installieren oder Multimedia-Content zu konsumieren. Schließen lässt
+			sich dieses Sicherheitsloch derzeit nur, indem Firmen das Aufspielen    privater
+			Inhalte ganz verbieten.
+			% TODO: überarbeiten/umschreiben... evtl. streichen
             
             \section{Entscheidung für Übertragungstechnik}
             
-            % evtl. bluetooth lt. gespräch? 
+            % evtl. bluetooth lt. gespräch?
             
-           	begründung durch schlussvolgerung aus
-           	sicherheitslücken und erläuterung sicherheitskonzept, damit die
-           	schwachstellen der technik nicht ausgenutzt oder nur zum teil
-           	ausgenutzt werden können.
+          begründung durch schlussvolgerung aus sicherheitslücken und
+          erläuterung sicherheitskonzept, damit die schwachstellen der technik
+          nicht ausgenutzt oder nur zum teil ausgenutzt werden können.
+           	
+          \texttt{YASA} soll möglichst unabhängig vom Standort genutzt werden
+          können. Eine solche Flexibilität lässt sofort einige der
+          angesprochenen Übertragungstechniken ausscheiden. Die einzige
+          Möglichkeit zu garantieren, dass die Applikation wirklich
+          Standortunabhängig genutzt werden kann ist die Verwendung
+          providerabhängigen Netzen. Für WLAN, Bluetooth & Co. muss das Gerät
+          immer in Reichweite mit der Empfängerstation bleiben, deswegen fallen
+          diese weg.
+          
+          
+           	
+           	
+           	
+           	
+           	
+           	
+           	
+           	
+           	
