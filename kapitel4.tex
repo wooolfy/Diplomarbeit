@@ -21,13 +21,24 @@
         	\texttt{YASA - Yet Another Smartphone Applicaction}  
         \end{quote}
 
-		Nachfolgend im Text wird mit YASA bezug auf den Prototypen genommen.
+		Nachfolgend im Text wird mit \texttt{YASA} bezug auf den Prototypen genommen.
 		%Formulierung
+		
+		Ausserdem werden die verschiedenen Tools ausgewählt, die zur Modellierung von
+		\texttt{YASA} dienen sollen. Dabei wird spezzielles Augenmerkt darauf gelegt,
+		dass die grafischen Werkzeuge saubere XML Dateien generieren, die später für
+		die (eventuell Model-zu-Model und)Model-zu-Code Transformation benutzt
+		werden. Beispielhaft wird versucht aus den verschiedenen Diagrammarten
+		(Klassendiagramm, Aktivitätendiagramm) Textbausteine zu generieren, um zu
+		überprüfen, welche Programme überhaupt zur Generierung von Transformationen
+		geeignet sind und welche nicht alle Diagrammtypischen Merkmale beherrschen.
+		Eventuell wird versucht bestehende Programme zu erweitern im Hinblick auf die
+		volle Unterstützung der verwendeten Diagrammtypen.
       	
 
 		\section{Geschäftsvorfall für die umzusetzende App}    
         Ein realistischer Geschäftsvorfall (kurz GF) soll als Grundlage für die
-        Umsetzung des Prototypen dienen. 
+        Umsetzung von \texttt{YASA} dienen. 
         
         \subsection{Vorgaben}
         
@@ -38,14 +49,14 @@
         \begin{itemize}
           \item Persistenz
           \item Fachliche Logik
-          \item Arbeitsabläufe (Workflow)
+          %\item Arbeitsabläufe (Workflow)
           \item Benutzer Frontend
         \end{itemize}
         
         \subsection{Beschreibung des Geschäftsvorfalls}
         
         Dafür wurde eine spezielle Funktion aus Kapitel
-        2 ausgewählt, die nun umgesetzt werden soll:
+        2 ausgewählt, die nun umgesetzt wird:
         
         \begin{quote}
         ``Spare Parts Catalogue: In einem über Smartphone
@@ -232,7 +243,7 @@
 
       	\subsection{PIM}
       	
-      	Um die entworfenen Funktionen weiter umzusetzen und ein Platform
+      	Um die dargestellten Funktionen weiter umzusetzen und ein Platform
       	Independent Model zu generieren wird nun die Plattformunabhängige
       	Basisarchitektur festgelegt.
       	
@@ -261,11 +272,16 @@
 		Als oberste Schicht im Diagramm \ref{tab:yasa-architecture} finden wir die
 		Präsentationsschicht. Diese ist zuständig für die Darstellung des Inhalts auf
 		dem jeweiligen Smartphone in einer für den Benutzer verständliche Art und
-		Weise. Darunter befindet sich der Dialogfluss. Hier werden Kontrollflüsse der
-		Anwendung definiert. Es folgt die Geschäftslogik des Systems, die in Form von
-		Services zur Verfügung gestellt werden. Sollen Daten im Rahmen der
-		Geschäftslogik dauerhaft gespeichert und abrufbar sein, kümmert sich die
-		Persistenzschicht darum. 
+		Weise. 
+		
+		Darunter befindet sich der Dialogfluss. Hier werden Kontrollflüsse der
+		Anwendung definiert. 
+		
+% 		Es folgt die Geschäftslogik des Systems, die in Form von
+% 		Services zur Verfügung gestellt werden. 
+		
+		Sollen Daten im Rahmen der Geschäftslogik dauerhaft gespeichert und abrufbar
+		sein, kümmert sich die Persistenzschicht darum. 
 		
 		Die festgelegten Schichten können durch folgende UML-Profile modelliert
 		werden:
@@ -301,12 +317,14 @@
         Als Basisdiagramm soll uns das Aktivitätsdiagramm dienen, welches durch
         weitere Elemente erweitert wurde. Zum einen wäre dies das Metamodell
         View, das die Konstrukte zur Modellierung der Dialogmasken enthält
-        (siehe Abbildung \ref{fig:profile_pageflow}). Zum anderen...
+        (siehe Abbildung \ref{fig:profile_pageflow}).
+        
+        %TODO: zum anderen
         
         Als nächstes zu definieren ist das View Metamodell. Hier wird festgelegt,
         welche Elemente zur Dartellung verwendet werden und wie der Benutzer die
         dargestellten Elemente manipulieren darf (Abbildung
-        \ref{fig:profile_view}). Basiselement ist der \texttt{View}. Ihm werden
+        \ref{fig:profile_view}). Basisbaustein ist der \texttt{View}. Ihm werden
         beliebig viele View-Elemente zugeordnet. Weiterhin im Modell enthalten
         sind \texttt{OutputElemente} für die übergebenden Modelldaten in
         grafischer Form und den \texttt{InputElementen}, die Werte des
@@ -329,7 +347,7 @@
 		      \label{fig:ad_Ersatzteilkatalog_durchsuchen}
 		\end{figure}	
 
-		Bla fluss erklären...
+		TODO: Erklärung Fluss
 		
 		%TODO: Skizze im Anhang einfügen?
 		Zur Beschreibung des Dialogflusses gehören ausserdem weitere Details, um die
@@ -348,56 +366,57 @@
       %TODO: Klassendiagramm erstellen für Persistenz. Aber was/wie?    
       
       \subsection{Vorhandene Modellierungs-/Transformationstools auf dem      Markt}
-          
-          
-      
+
       Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
-      Software zugunsten offener Standard und frei verfügbarer
+      Software zugunsten offener Standards und frei verfügbarer
       Open-Source Technologien. Dabei sind auch Überlegungen zu den
       unterschiedlichen Lizenzen anzustellen.
       
+      Deswegen werden im Folgenden erst grafische Tools zur Modellierung der
+      Diagramme untersucht und anschließend Transformationstools, die für die
+      Überführung der einzelnen Modelle und schliesslich für den entstehenden
+      Quellcode verantwortlich sind.
       
-%           \begin{itemize}
-%             \item Die Transformationen erzeugen dabei aus den Elementen des
-%             Quellmodells die Elemente des Zielmodells. Üblicherweise laufen
-%             die Transformationen von der abstrakteren zur konkreteren Schicht
-%             (CIM -> PIM -> PSM -> Code)
-%             \item Ist hier wirklich eine komplette Transformation nötig? Dann
-%             müssen mit OAW komplett alle Cartridges erstellt werden
-%             \item Ansonsten Acceleo für Model-zu-Code Transformation; Dafür
-%             muss nur 1 Template je umzusetzendes Betriebssystem geschrieben
-%             werden und die Templates können aus vorhandenem Beispielcode
-%             generiert werden (sehr schnelle Erstellung von Templates möglich)
-%             %\item Evtl. AndroMDA (wird allerdings seit 2006 nicht mehr
-%             %weiterentwickelt...)
-%           \end{itemize}
-      
-      
-      \subsubsection{OAW}
-      \subsubsection{Acceleo}
-      \subsection{Wahl der zu benutzenden Tools}
-      
-      Visual Paradigm
+ 	  \subsubsection{Visual Paradigm}
       
       Visual Paradigm ist sehr leicht und intuitiv zu erlernen. Die meisten
       Funktionen findet man auf anhieb, ohne auch nur einen Blick in die
       Dokumentation werfen zu müssen. Allerdings macht das arbeiten mit Visual
-      Paradigm in Kombination mit Accelo als Transformationstool nicht viel
-      Sinn, da beim Export der Diagramme in XML Files Informationen verloren
+      Paradigm in Kombination mit einem Transformationstool nicht
+      viel Sinn, da beim Export der Diagramme in XML Files Informationen verloren
       gehen. Beim Import in Acceleo beispielsweise fehlen die Namen bzw.
       Bezeichnungen der Diagramme so wie Zusammenhänge der einzelnen
       Diagrammarten, die jedoch vorher definiert wurden. Damit ist Visual
-      Paradigm für den Zweck der Codegenerierung in Acceleo unbrauchbar.
+      Paradigm für den Zweck der Codegenerierung relativ unbrauchbar.
 
-      MagicDraw
+      \subsubsection{MagicDraw}
 
       Ein erster Versuch ein einfaches Klassendiagramm zu implementieren und in
       Code umzuwandeln klappte erstaunlicherweise recht gut. Allerdings ist die
       Bedienung von MagicDraw wesentlich komplexer und unübersichtlicher als bei
       Visual Paradigm. Die Einarbeitungszeit ist bei dieser Komplexität
       exponentiell größer. Daher verzögerte sich die Erstellung der Diagramme
-      sehr. Was in Visual Paradigm in Stunden machbar war, dauerte hier Tage.
-      Schlechte Navigation, unübersichtliche Menüs und wenig Dokumentation zur
-      Software, aber dafür volle Kompatibilität zu Acceleo.
+      sehr. Was in Visual Paradigm in Stunden machbar war, dauerte hier
+      einen ganzen Tag. Schlechte Navigation, unübersichtliche Menüs und
+      unzureichende Dokumentation zur Software, aber dafür volle
+      Kompatibilität zum XML Standard.
+      
+      \subsubsection{Acceleo}
+      
+      Einfache Klassendiagramme in Code umzuwandeln ist mit dem Tool kein
+      Problem. Allerdings ist die Dokumentation in Bezug auf Diagrammarten
+      ziemlich unvollständig. Das Durchlaufen von Aktivitätsdiagrammen ist
+      prinzipiell anhand der Activities möglich. Allerdings konnte ich nicht
+      herausfinden, wie man diese in der richtigen Reihenfolge darstellt.
+      Acceleo wirft die Ergebnisse einfach so durcheinander, in der Reihenfolge
+      wie sie im XML File des UML's generiert wurden. Aus einem Kontrollfluss
+      heraus etwas zu erzeugen stellt sich also als ziemlich unmöglich dar.
+      
+      \subsubsection{oAW}
+      
+      
+      \subsection{Wahl der zu benutzenden Tools}
+      
+     
       
       
