@@ -7,14 +7,16 @@
 		
 	\section{Zielsetzung und Beschreibung der Aufgabenstellung}
     
-    Ziel dieser Arbeit ist es aufzuzeigen, ob die Kommunikation zwischen einer
-    Fertigungsmaschine und einem Smartphone sinnvoll ist, und welche konkreten
-    Vorteile dies bietet im Vergleich zu einer Feststation mit HMI.
-      
-    Als Lösungsanbieter für Abfüll- und Verpackungsanlagen stellt KHS
-    Fertigungsmaschinen für die Industrie her. Die Bedienung dieser Maschinen
-    beim Kunden erfolgte in der Vergangenheit direkt an der Maschine über das
-    Human Machine Interface (später als HMI bezeichnet).
+    Ziel dieser Arbeit ist es aufzuzeigen, ob es möglich ist, mit Hilfe des 
+    modellgetriebenen Anstatzes zur Softwareentwicklung Apps für Smartphones zu
+    erstellen und welche Vorteile dieser Ansatz bietet. Dabei soll geprüft
+    werden, inwiefern die Kommunikation zwischen einer Fertigungsmaschine und
+    einem Smartphone sinnvoll ist. 
+    
+    Als Lösungsanbieter für Abfüll- und
+    Verpackungsanlagen stellt KHS Fertigungsmaschinen für die Industrie her.
+    Die Bedienung dieser Maschinen beim Kunden erfolgte in der Vergangenheit
+    direkt an der Maschine über das Human Machine Interface (später als HMI bezeichnet).
     
     Auf Grund der steigenden Verbreitung von Smartphones und der damit
     verbundenen Möglichkeiten soll nun im Rahmen dieser Diplomarbeit überprüft
@@ -57,7 +59,7 @@
     
     Ein konkretes Programm soll in Form eines Prototyps erst genau spezifiziert,
     dann mit Hilfe der Modellgetriebenen Softwareentwicklung (kurz MDA)
-    ansatzweise auf möglichst viele mobile Endgeräte umsetzbar gemacht werden.  
+    ansatzweise auf zwei mobile Endgeräte umgesetzt werden.  
     
     Es werden verschiedene Erwartungshaltungen formuliert im Hinblick auf die
     unterschiedlichen Eigenschaften der Endgeräte. Bei der Softwareerstellung
@@ -67,8 +69,8 @@
    
     Diese Diplomarbeit soll als Grundgerüst für zukünftige Entscheidungen und
     Entwicklungen im Bereich Apps für Smartphones dienen und einen konkreten
-    Anhaltspunkt darüber geben, ob Entwicklung in dieser Sparte überhaupt
-    sinnvoll erscheint.
+    Anhaltspunkt darüber geben, ob Applikationen für den industriellen Einsatz
+    überhaupt sinnvoll erscheinen oder.
     
     \section{Das Unternehmen KHS}
 		%\begin{itemize}
@@ -99,7 +101,167 @@
 		Diagnosetechniken festigt die KHS fortlaufend ihre Position als Innovator im
 		Markt.'' [KHS10], letzter Abruf: 21.11.2010
 		\end{quote} 
-        
+		
+		\section{Grundlagen für die folgenden Kapitel}
+		Für das Verständnis der nachfolgenden Kapitel werden kurz wichtige Verfahren
+		benannt und Techniken beschrieben, die Anwendung finden. Weiterhin werden
+		Hinweise zu weiterführender Literatur gegeben.
+		
+		\subsection{MDA}
+		
+% 			\begin{quote}
+% 		      	``MDA ist ein Standard der Object Management Group (kurz OMG). Die OMG
+% 		      	selbst wurde 1989 gegründet und ist ein offenes Konsortium aus Firmen
+% 		      	weltweit. Die OMG erstellt herstellerneutrale Spezifikationen zur
+% 		      	Verbesserung der Interoperatibilität und Portierbarkeit von
+% 		      	Softwaresystemen und ist traditionell eine Plattform für Middleware- und
+% 		      	Tool-Hersteller zur Synchronisation und Standardisierung ihrer
+% 		      	Betätigungsfelder.'' [Stahl07], Seite 377
+% 		      	\end{quote}
+
+			Von modellgetriebener Software-Entwicklung spricht man, wenn Modelle nicht
+			lediglich zu Dokumentationszwecken eingesetzt werden, sondern zentrale
+			Artefakte eines lauffähigen Systems bilden. Dabei ist die Anwendungslogik
+			nicht in einer 3GL-Programmiersprache definiert, sondern in Modellen
+			spezifiziert. Ausganspunkt eines Vorgehens nach MDA ist ein begrenztes
+			Wissens- oder Interessensgebiet, was als Domäne oder Anwendungsdomäne
+			bezeichnet wird. Diese Domöne wird mit einer für diese ausgewählten
+			Sprache beschrieben. Die Definition einer solchen Domain Specific Language
+			(DSL) rechnet sich nur dann, wenn Modellelemente den Problemraum genauer
+			repräsentieren können als eine 3GL-Sprache. Die DSL definiert die Bedeutung
+			des Modells. Deren konkrete Syntax kann entweder textuell oder grafisch
+			sein. Die Kernidee der MDA folgt der Grundidee, dass die Spezifikation einer
+			Softwarekomponente unabhängig von ihrer technischen Umsetzung beschrieben wird.
+			
+			Die Meta Object Facility (MOF) bildet den Kern der MDA. Diese beschreibt das
+			zugrundeliegende Metamodell für die MDA-konformen Tools, die zur Modellierung
+			verwendet werden. Die Defininition einer DSL erfolgt mittels der Meta Object
+			Family. Im konkreten Fall auf unseren Prototypen bezogen verwenden wir eine
+			selbst erstellte Erweiterung von UML mittels Profilen. [Stahl07], S. 377ff
+		
+			In der Vergangenheit der Softwareentwicklung zu beobachten war, dass wenn zu
+			erstellende Software-Systeme auf ein nicht mehr zu beherrschendes Maß
+			angewachsen waren, die Lösung darin bestand auf eine höhere semantische Ebene
+			zu gehen (Abstraktionssprung der Programmiersprache). Ausgehend von der
+			Tatsache, dass Maschinensprachen über Assembler, Prozedurale Sprachen durch
+			Objektorientierte Sprachen abgelöst wurden lässt sich schlussfolgern, dass die
+			Zukunft des Software-Engineerings in den Modellierungssprachen liegt.
+			[Gruhn06], S. 14ff
+			
+			%TODO! aufwand niedrig halten->mda ->auch in überleitung
+			%DSL abgrenzen
+			
+			%TODO: Grafik aus Buch S. 15
+			\subsection{Arbeitsweise}
+				MDA arbeitet mit verschiedenen Ebenen, die vom abstrakten Entwurf eines
+				Systems zur konkreten Umsetzung führen sollen. Grundlage dieser Schichten
+				bilden die DSL. Im Fall des zu entwerfenden Prototypen wurde konkret UML
+				für die Modellierung verwendet.
+				
+				
+				\newcolumntype{A}{%
+				>{\columncolor{hellgrau}}p}
+				\arrayrulecolor{white}
+		        \begin{tabular}{|A{10cm}|}
+                \hline
+                \rowcolor{dunkelgrau}
+		        Computation Independent Model (CIM)\\
+		        \hline
+          		Das CIM liefert eine Sicht auf das Gesamtsystem unabhängig davon,
+          		wie es implementiert werden soll. Es enthält die Anforderungen des
+          		Systems an die Umwelt.\\
+		        \hline
+		        \rowcolor{weiss}
+	          \begin{center}$\Downarrow$ \end{center}\\
+	          \rowcolor{dunkelgrau}
+	          \hline
+	          Platform Independent Model (PIM)\\
+	          \hline
+	          		Das PIM beschreibt die formale Struktur und die Funktionalität des
+	          		Systems.\\
+	          \hline
+	          \rowcolor{weiss}
+	          \begin{center}$\Downarrow$ \end{center}\\	
+	          \rowcolor{dunkelgrau}
+	          \hline
+	          Platform Specific Model (PSM)\\
+	          \hline
+	          		Durch Anreicherung des PIM mit plattform-abhängigen Informationen
+	          		entsteht das PSM. \\
+	          \hline
+	          \rowcolor{weiss}
+	          \begin{center}$\Downarrow$ \end{center}\\
+	          \rowcolor{dunkelgrau}
+	          \hline
+	          Code\\   %TODO: check: richtig?
+	          \hline
+	          		Aus dem PSM wird der Quellcode für die Zielplattform generiert.
+					Meist entsteht dabei noch kein ausführbarer Code, sondern lediglich
+					ein Grundgerüst, das für die weitere händische Implementierung genutzt
+					wird.\\
+			\hline
+	        \end{tabular}
+		        
+		        Kernidee der MDA ist es vom unabhängigen Modell über
+		        Transformationen bis hin zum eigentlichen Programmcode zu gelangen.
+		        Transformationen bilden die Grundlage für die Überführung von einer
+		        Schicht in eine andere. Der Prozess der Transformation soll bei der
+		        MDA automatisiert durch vorher festgelegte
+		        Transformationsvorschriften durchgeführt werden.
+		        
+		        Konkrete Ziele der MDA lassen sich wie folgt beschreiben:		        
+		        \begin{itemize}
+		          \item Konservierung der Fachlichkeit
+		          \item Portierbarkeit
+		          \item Systemintegration und Interoperabilität
+		          \item Effiziente Softwareentwicklung
+		          \item Domänen-Orientierung
+		        \end{itemize} [Gruhn06], S. 21 ff
+		        
+		        Mehr Informationen zur Model Driven Architecture findet man auf der
+		        Webseite der OMG\footnote{http://www.omg.org} oder als Literatur
+		        [Gruhn06], in diesen detailiert auf die Softwareerstellung mit Hilfe
+		        von MDA (auch an Beispielen) eingegangen wird.
+		        
+		 %TODO       
+		%     \section{ISO/OSI-Modell}
+		%     
+		%     OSI Model
+		% 	Data unit 	Layer 	Function
+		% Host
+		% layers 	Data 	7. Application 	Network process to application
+		% 6. Presentation 	Data representation, encryption and decryption, convert machine dependent data to machine independent data
+		% 5. Session 	Interhost communication
+		% Segments 	4. Transport 	End-to-end connections and reliability,flow control
+		% Media
+		% layers 	Packet 	3. Network 	Path determination and logical addressing
+		% Frame 	2. Data Link 	Physical addressing
+		% Bit 	1. Physical 	Media, signal and binary transmission
+		% 
+		% 	\begin{table}%[h]
+		%     	\centering \leavevmode %Tabelle zentrieren
+		%         \caption{OSI-Modell}
+		%         \label{tab:iso-osi}
+		%         %\addtocounter{footnote}{+1}
+		%         \begin{tabular}{||c||c||c||}
+		%         	\hline \hline
+		%         	\multicolumn{3}{||c||}{OSI Model}\\
+		%         	\hline \hline
+		%        		Data Unit(Einheit) & Layer & Funktion\\
+		%        		\hline \hline
+		%         \end{tabular}
+		% 	\end{table}
+		% 			%\addtocounter{footnote} 
+		% 			%\footnotetext{[CT10], S. 101}
+		%     
+		%     
+		%     \subsection{Layer}
+		%     
+		%     \subsection{TCP/IP Header}
+		%     
+		%     %TODO: Bild von Header einfügen. evtl. einzelne begriffe klären. oder
+		%     % kurzen text dazu formulieren
+		        
 		
         
     

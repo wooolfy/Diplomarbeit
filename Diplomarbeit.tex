@@ -1,7 +1,9 @@
 % % Diplomarbeit Vorlage Tex V 000.1
 
 %\documentclass[12pt,pdftex]{article}
-\documentclass[12pt,pdftex,a4paper,titlepage]{scrreprt}
+\documentclass[12pt,pdftex,a4paper,titlepage,pointlessnumbers]{scrreprt}
+%pointlessnumbers machen die falschen punkte im inhaltsverzeichnis des
+% komascripts weg!
 %\documentclass[12pt,pdftex,a4paper,titlepage]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
@@ -69,6 +71,7 @@
 % --- Farbdefinitionen ----------------------------------------
 \definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
 \definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+\definecolor{weiss}{rgb}{1,1,1}
 
 
  \lstset{
@@ -128,7 +131,7 @@
 
 \include{kapitel2}
 
-\include{kapitel3}
+%\include{kapitel3}
 
 \include{kapitel4}
 
