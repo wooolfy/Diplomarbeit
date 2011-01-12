@@ -15,6 +15,56 @@
           dem Simulator. Zu demonstrationszwecken ist dies wohl sinnvoller. 
         \end{itemize}
         \section{Codegenerierung}
+        
+        \subsection{Vorhandene Tools auf dem Markt}
+
+      Verzichtet werden soll auf die Verwendung kommerziell-, proprietärer
+      Software zugunsten offener Standards und frei verfügbarer
+      Open-Source Technologien. Dabei sind auch Überlegungen zu den
+      unterschiedlichen Lizenzen anzustellen.
+      
+      Deswegen werden im Folgenden erst grafische Tools zur Modellierung der
+      Diagramme untersucht und anschließend Transformationstools, die für die
+      Überführung der einzelnen Modelle und schliesslich für den entstehenden
+      Quellcode verantwortlich sind.
+      
+ 	  \subsubsection{Visual Paradigm}
+      
+      Visual Paradigm ist sehr leicht und intuitiv zu erlernen. Die meisten
+      Funktionen findet man auf anhieb, ohne auch nur einen Blick in die
+      Dokumentation werfen zu müssen. Allerdings macht das arbeiten mit Visual
+      Paradigm in Kombination mit einem Transformationstool nicht
+      viel Sinn, da beim Export der Diagramme in XML Files Informationen verloren
+      gehen. Beim Import in Acceleo beispielsweise fehlen die Namen bzw.
+      Bezeichnungen der Diagramme so wie Zusammenhänge der einzelnen
+      Diagrammarten, die jedoch vorher definiert wurden. Damit ist Visual
+      Paradigm für den Zweck der Codegenerierung relativ unbrauchbar.
+
+      \subsubsection{MagicDraw}
+
+      Ein erster Versuch ein einfaches Klassendiagramm zu implementieren und in
+      Code umzuwandeln klappte erstaunlicherweise recht gut. Allerdings ist die
+      Bedienung von MagicDraw wesentlich komplexer und unübersichtlicher als bei
+      Visual Paradigm. Die Einarbeitungszeit ist bei dieser Komplexität
+      exponentiell größer. Daher verzögerte sich die Erstellung der Diagramme
+      sehr. Was in Visual Paradigm in Stunden machbar war, dauerte hier
+      einen ganzen Tag. Schlechte Navigation, unübersichtliche Menüs und
+      unzureichende Dokumentation zur Software, aber dafür volle
+      Kompatibilität zum XML Standard.
+      
+      \subsubsection{Acceleo}
+      
+      Einfache Klassendiagramme in Code umzuwandeln ist mit dem Tool kein
+      Problem. Allerdings ist die Dokumentation in Bezug auf Diagrammarten
+      ziemlich unvollständig. Das Durchlaufen von Aktivitätsdiagrammen ist
+      prinzipiell anhand der Activities möglich. Allerdings konnte ich nicht
+      herausfinden, wie man diese in der richtigen Reihenfolge darstellt.
+      Acceleo wirft die Ergebnisse einfach so durcheinander, in der Reihenfolge
+      wie sie im XML File des UML's generiert wurden. Aus einem Kontrollfluss
+      heraus etwas zu erzeugen stellt sich also als ziemlich unmöglich dar.
+      
+      \subsubsection{oAW}
+        
         \begin{itemize}
           \item Probleme während der Umsetzung?
           \item Erwartungshaltung?
