@@ -37,13 +37,13 @@
       	
 
 		\section{Geschäftsvorfall für die umzusetzende App}    
-        Ein realistischer Geschäftsvorfall (kurz GF) soll als Grundlage für die
-        Umsetzung von \texttt{YASA} dienen. 
+        Ein realistischer Geschäftanwendungsfall (kurz GAF) soll als Grundlage
+        für die Umsetzung von \texttt{YASA} dienen. 
         
         \subsection{Vorgaben}
         
         Es soll gezeigt werden, dass mit MDA die Umsetzung des 
-        GF technisch möglich ist. Ebenso sollen die Grenzen
+        GAF technisch möglich ist. Ebenso sollen die Grenzen
         der Technologie erforscht werden. Dabei soll gezeigt werden, dass
         folgende Artefakte aus dem Modell generiert werden können: 
         \begin{itemize}
@@ -92,7 +92,7 @@
       	\begin{figure}[h]%{r}{8cm}
 		      \centering	% zentrieren
 		      \includegraphics[width=1\textwidth]{Ersatzteilkatalog_use_case}
-		      \caption{Geschäftsanwendungsfälle Use-Case-Diagramm}
+		      \caption{Geschäftsanwendungsfall Use-Case-Diagramm}
 		      \label{fig:usecase}
 		\end{figure}
 
@@ -131,7 +131,11 @@
                                     &   Ersatzteil auswählen (Detail
                                              ansehen)\\
                 \hline \hline
-				Nachbedingungen		&	-\\
+				Nachbedingungen bei Erfolg		&	Ersatzteil ausgewählt\\
+				%\hhline{|t:==:t|}
+				\hline \hline
+				Nachbedingungen bei Misserfolg	&	Kein Ersatzteil gefunden\\
+												&	Fehlermeldung ausgeben\\
 				%\hhline{|t:==:t|}
 				\hline \hline
 				%\end{tabular}
@@ -156,7 +160,9 @@
 									&	Bestelldetails anzeigen\\
                                     &   Bestellung abschicken\\
                 \hline \hline
-				Nachbedingungen		&	Bestellung wurde erfolgreich übermittelt\\
+				Nachbedingungen	bei Erfolg		&	Bestellung wurde erfolgreich übermittelt\\
+				\hline \hline
+				Nachbedingungen	bei Missrfolg	&	Bestellung konnte nicht übermittelt werden\\
 				\hline \hline
 				%\end{tabular}
 
@@ -175,9 +181,9 @@
 				Teilhandlungen		&	Bestelldetails anzeigen\\
                                     &   Bestellung stornieren\\
                 \hline \hline
-				Nachbedingung bei Erfolg		&	Bestellung wurde erfolgreich storniert\\
+				Nachbedingungen bei Erfolg		&	Bestellung wurde erfolgreich storniert\\
 				\hline \hline
-				Nachbedingung bei Misserfolg	&	Bestellung konnte nicht storniert werden
+				Nachbedingungen bei Misserfolg	&	Bestellung konnte nicht storniert werden
 													(evtl. wurde Bestellung schon versandt) \\
 				\hline \hline
 				%\end{tabular}
@@ -198,7 +204,10 @@
 				Teilhandlungen		&	Bestelldetails anzeigen\\
 									&	Bestellstatus anzeigen\\
                 \hline \hline
-				Nachbedingungen		&	-\\
+				Nachbedingungen bei Erfolg			&	Bestellung gefunden\\
+				\hline \hline
+				Nachbedingungen bei Misserfolg		&	Keine Bestellung gefunden\\
+													&	Fehlermeldung ausgeben\\
 				\hline \hline
 				%\end{tabular}
 
@@ -223,8 +232,10 @@
 									&	passendes Ersatzteil ermitteln\\
 									&	Systemmeldung an Benutzer senden\\
                 \hline \hline
-				Nachbedingungen		&	Nutzer wurde über Systemfehler informiert und kann
-										Ersatzteil bestellen\\ 
+				Nachbedingungen	bei Erfolg		&	Nutzer wurde über Systemfehler informiert und
+				kann Ersatzteil bestellen\\ 
+				\hline \hline
+				Nachbedingungen	bei Misserfolg	&	Meldung konnte nicht übermittelt werden\\
 				\hline \hline
 				\end{longtable}
 		%\end{table}
@@ -352,7 +363,7 @@
 		%TODO: Skizze im Anhang einfügen?
 		Zur Beschreibung des Dialogflusses gehören ausserdem weitere Details, um die
 		gestellten Anforderungen vollständig abzubilden. (evtl. Verweis
-		Entwurfsskizze). So muss jeder von einem \texttt{ViewCall} aufgerufene
+		Entwurfskizze). So muss jeder von einem \texttt{ViewCall} aufgerufene
 		\texttt{View} weiter detailliert und mit dem entsprechenden Datenmodell
 		verbunden werden (Abbildung \ref{fig:view_Ersatzteilkatalog_durchsuchen}).
         
