@@ -13,8 +13,19 @@
       	Das folgende Kapitel beschäftigt sich mit der Systemspezifikation für
       	die zu entwicklende Smartphone App. Dabei wird ein Konzept erstellt,
       	dass als Grundlage für den modellgetriebenen Ansatz dienen soll. 
-      	
-      	Da wir uns jetzt bei der konkreten Umsetzung der Software befinden ist
+		
+		Ausserdem werden die verschiedenen Tools ausgewählt, die zur Modellierung von
+		\texttt{YASA} dienen sollen. Dabei wird spezzielles Augenmerkt darauf gelegt,
+		dass die grafischen Werkzeuge saubere XMI Dateien generieren, die später für
+		die (eventuell Model-zu-Model und)Model-zu-Code Transformation benutzt
+		werden. Beispielhaft wird versucht aus den verschiedenen Diagrammarten
+		(Klassendiagramm, Aktivitätendiagramm) Textbausteine zu generieren, um zu
+		überprüfen, welche Programme überhaupt zur Generierung von Transformationen
+		geeignet sind und welche nicht alle Diagrammtypischen Merkmale beherrschen.
+		Eventuell wird versucht bestehende Programme zu erweitern im Hinblick auf die
+		volle Unterstützung der verwendeten Diagrammtypen.
+		
+		Da wir uns jetzt bei der konkreten Umsetzung der Software befinden ist
       	es an der Zeit dem Projekt einen Namen zu geben. %Formulierung
       	
       	\begin{quote}
@@ -23,17 +34,6 @@
 
 		Nachfolgend im Text wird mit \texttt{YASA} bezug auf den Prototypen genommen.
 		%Formulierung
-		
-		Ausserdem werden die verschiedenen Tools ausgewählt, die zur Modellierung von
-		\texttt{YASA} dienen sollen. Dabei wird spezzielles Augenmerkt darauf gelegt,
-		dass die grafischen Werkzeuge saubere XML Dateien generieren, die später für
-		die (eventuell Model-zu-Model und)Model-zu-Code Transformation benutzt
-		werden. Beispielhaft wird versucht aus den verschiedenen Diagrammarten
-		(Klassendiagramm, Aktivitätendiagramm) Textbausteine zu generieren, um zu
-		überprüfen, welche Programme überhaupt zur Generierung von Transformationen
-		geeignet sind und welche nicht alle Diagrammtypischen Merkmale beherrschen.
-		Eventuell wird versucht bestehende Programme zu erweitern im Hinblick auf die
-		volle Unterstützung der verwendeten Diagrammtypen.
       	
 
 		\section{Geschäftsvorfall für die umzusetzende App}    
@@ -68,7 +68,7 @@
 
 %TODO: überarbeiten!!!!
 
-      	\section{Anwendung auf die Anforderungsdefinition}
+      	\section{Anforderungsdefinition}
       	
       	Nach der Kurzbeschreibung des Anwendungsfalls folgt als nächstes die
       	Dokumentierung der Einzelheiten. Zuerst folgt eine textuelle
